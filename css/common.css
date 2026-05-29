@@ -1,2 +1,78 @@
 @charset "utf-8";
 
+/* ==========================================================================
+   1. 웹 폰트 등록 (@font-face)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   [국문] Pretendard 시리즈
+-------------------------------------------------------------------------- */
+/* Regular (400) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Medium (500) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+/* SemiBold (600) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+/* Bold (700) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* --------------------------------------------------------------------------
+   [영문] EB Garamond 시리즈
+-------------------------------------------------------------------------- */
+/* Regular (400) */
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('../fonts/EBGaramond-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+/* Medium (500) */
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('../fonts/EBGaramond-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+/* SemiBold (600) - 파일 이름이 SemiBold입니다 */
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('../fonts/EBGaramond-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+}
+/* Bold (700) */
+@font-face {
+    font-family: 'EBGaramond';
+    src: url('../fonts/EBGaramond-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* ==========================================================================
+   2. 전체 배경 및 기본 바디 세팅
+   ========================================================================== */
+
+body {background:#202020; font-family:'EBGaramond', 'Pretendard';}
+*, *:before, *:after {box-sizing: border-box;}
+a {text-decoration: none;}
+
