@@ -1,0 +1,35 @@
+1. 프로젝트 작업할 폴더 만들기 (위치 상관 없음)
+2. 폴더 빈 공간 오른쪽 마우스 -> Git Bash Here 클릭
+3. git clone https://github.com/JooD-E/teamproject.git
+4. cd teamproject
+5. git fetch origin                // (브랜치 동기화)
+   /* branch 다 만들어놔서 추가로 만들 필요 없어요! 필요하시면 만드셔도 되긴 합니다 */
+
+6. 본인 담당 브랜치로 입장하기 (아래 중 본인 것 1개만 입력)
+   - 장지수: git checkout feature/product
+   - 박혜은: git checkout feature/discovery
+   - 정예빈: git checkout feature/about
+
+7. code . (VS Code 에디터 바로 열기 꿀팁!)
+8. 작업 시작 -> 작업 종료
+9. git status (작업한 파일 목록 빨간 글씨로 확인)
+10. git add . 
+11. git commit -m "작업 내용 기재"
+12. git push origin feature/본인브랜치이름
+   - 장지수: git checkout feature/product
+   - 박혜은: git checkout feature/discovery
+   - 정예빈: git checkout feature/about
+
+
+🚨 주의사항 🚨
+
+❌❌'git push origin master' 절대금지 ❌❌
+
+※ git init 사용 금지
+- clone 폴더에 git init 치면 깃이 이중으로 꼬일 수 있음
+
+※ 다른 사람의 HTML이나 CSS, JS 파일은 가능한 건드리지 말기
+- 서로 같은 줄 수정하면 충돌 나서 코드가 날아갈 수 있음
+
+※ common.css / common.js 등 공통 파일 수정 시 서로 소통하기
+- 위와 마찬가지로 충돌 일어나서 코드가 꼬일 수 있으니 톡방에 미리 말할 것!
