@@ -1,29 +1,42 @@
-1. 프로젝트 작업할 폴더 만들기 (위치 상관 없음)
+1. 프로젝트 작업할 폴더 만들기 (위치 상관 없음) 
 2. 폴더 빈 공간 오른쪽 마우스 -> Git Bash Here 클릭
 3. git clone https://github.com/JooD-E/teamproject.git
 4. cd teamproject
-5. git fetch origin                // (브랜치 동기화)
+5. git fetch origin                //     브랜치 동기화
    /* branch 다 만들어놔서 추가로 만들 필요 없어요! 필요하시면 만드셔도 되긴 합니다 */
 
+========================================
+🚨 1 - 5는 처음 시작할 때만 하시면 됩니다.🚨
+========================================
+
+[ 매일 작업 시작 전 루틴]
 6. 본인 담당 브랜치로 입장하기 (아래 중 본인 것 1개만 입력)
    - 장지수: git checkout feature/product
    - 박혜은: git checkout feature/discovery
    - 정예빈: git checkout feature/about
 
-7. code . (VS Code 에디터 바로 열기 꿀팁!)
-8. 작업 시작 -> 작업 종료
-9. git status (작업한 파일 목록 빨간 글씨로 확인)
-10. git add . 
-11. git commit -m "작업 내용 기재+작업 날짜"
-12. git push origin feature/본인브랜치이름
-   - 장지수: git checkout feature/product
-   - 박혜은: git checkout feature/discovery
-   - 정예빈: git checkout feature/about
+7. git pull origin main         //  작업 업데이트
+8. code .                            //   VS Code 에디터 바로 열기 꿀팁!
+
+========================================
+9. 작업 시작 -> 작업 종료
+========================================
+
+10. git status                      //   작업한 파일 목록 빨간 글씨로 확인
+11. git add . 
+12. git commit -m "작업 내용 기재+작업 날짜"
+13. git push origin feature/본인브랜치이름
+   - 장지수: git push feature/product
+   - 박혜은: git push feature/discovery
+   - 정예빈: git push feature/about
+
+
+
 
 
 🚨 주의사항 🚨
 
-❌❌'git push origin master' 절대금지 ❌❌
+❌❌'git push origin master(main)' 절대금지 ❌❌
 
 ※ git init 사용 금지
 - clone 폴더에 git init 치면 깃이 이중으로 꼬일 수 있음
