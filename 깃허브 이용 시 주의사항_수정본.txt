@@ -14,7 +14,7 @@
 8. 작업 시작 -> 작업 종료
 9. git status (작업한 파일 목록 빨간 글씨로 확인)
 10. git add . 
-11. git commit -m "작업 내용 기재"
+11. git commit -m "작업 내용 기재+작업 날짜"
 12. git push origin feature/본인브랜치이름
    - 장지수: git checkout feature/product
    - 박혜은: git checkout feature/discovery
