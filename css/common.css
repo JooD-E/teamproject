@@ -72,7 +72,7 @@
    2. 전체 배경 및 기본 바디 세팅
    ========================================================================== */
 
-body {background:#202020; font-family:'EBGaramond', 'Pretendard';}
+body {background:#202020; font-family:'EBGaramond', 'Pretendard';color: #EBE8E8;}
 *, *:before, *:after {box-sizing: border-box;}
-a {text-decoration: none;}
+a {text-decoration: none;color: inherit;}
 
