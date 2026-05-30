@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function (){
         slideToClickedSlide: true,
         coverflowEffect:{
             rotate:0,
-            stretch: -50,
+            stretch: 50,
             depth:200,
             modifier:1,
             slideShadows:false,
