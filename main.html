@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/main.css">
-    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
+    <!-- ========================= 
+                Header
+    ===========================-->
     <header class="site-header">
         <h1 class="logo">
             <a href="/main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
@@ -30,6 +35,11 @@
         </nav>
     </header>
 
+
+    <!-- ========================= 
+              Hero Section
+    ===========================-->
+
     <main>
         <section class="hero-section">
             <div class="hero-image">
@@ -45,6 +55,63 @@
                     <span class="txt-vinyl">VINYL</span>
                 </h2>
             </div>
+        </section>
+
+
+        <!-- ========================= 
+                DJ's PICK
+        ===========================-->
+
+        <section class="dj-pick">
+            <div class="dj-pick-header">
+                <h2>DJ&apos;s PICK</h2>
+                <div class="dj-pick__deco-line"></div>
+                <div class="dj-pick__title-image"><img src="img/common/underbar01.png" alt="이미지"></div>
+            </div>
+
+            <div class="swiper album-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/1.png" alt="Live From the los angeles sports arena">
+                    </div>
+                    
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/2.png" alt="walking on a dream">
+                    </div>
+
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/3.png" alt="Mitsubishi Experience">
+                    </div>
+
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/4.png" alt="Changin' Times">
+                    </div>
+
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/5.png" alt="Voll.2">
+                    </div>
+
+                    <div class="swiper-slide dj-pick-slide-img">
+                        <img src="img/main/6.png" alt="IRIS OUT">
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-slider-container">
+                <div class="swiper text-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><p>Live From The Los Angeles Sports Arena</p></div>
+                        <div class="swiper-slide"><p>Walking On A Dream</p></div>
+                        <div class="swiper-slide"><p>Mitsubishi Experience</p></div>
+                        <div class="swiper-slide"><p>Changin' Times</p></div>
+                        <div class="swiper-slide"><p>Voll.2</p></div>
+                        <div class="swiper-slide"><p>IRIS OUT</p></div>
+                    </div>
+                </div>
+
+                <div class="title-underline"></div>
+            </div>
+            
         </section>
     </main>
 
