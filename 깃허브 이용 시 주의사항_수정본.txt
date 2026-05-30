@@ -10,6 +10,7 @@
 ========================================
 
 [ 매일 작업 시작 전 루틴]
+
 6. 본인 담당 브랜치로 입장하기 (아래 중 본인 것 1개만 입력)
    - 장지수: git checkout feature/product
    - 박혜은: git checkout feature/discovery
