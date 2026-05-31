@@ -10,8 +10,8 @@
 .logo a img{width:110px;}
 
 .util-nav ul {display:flex;gap: 33px;}
-.util-nav ul li {margin-top:10px;}
-.util-nav ul li:last-child{margin-top:0;}
+.util-nav ul li {margin-top:10px;margin-left:5px;}
+.util-nav ul li:last-child{margin-top:0;margin-left:0;}
 .util-nav ul li button {background:none;border:none;cursor: pointer;}
 .util-nav ul li button img {width:40px;}
 .util-nav ul li img {width:25px;}
@@ -36,8 +36,8 @@
 /* =========================
           DJ's PICK
 ===========================*/
-.dj-pick {width:100%;max-width:1600px;margin:80px auto; display:flex; flex-direction:column;}
-.dj-pick-header{width:100%; margin-bottom:40px;}
+.dj-pick {width:100%;margin:80px auto; display:flex; flex-direction:column;}
+.dj-pick-header{width:80%;margin:0 auto; margin-bottom:40px;}
 .dj-pick-header h2 {font-size:48px;font-weight:600;letter-spacing:2px;}
 .dj-pick__title-image{opacity:0.5;}
 .dj-pick__deco-line {width:100px; height:20px; border-bottom: 6px solid #fff;}
@@ -64,7 +64,7 @@
         New-Arrival
 ===========================*/
 
-.new-arrival{width:100%; position:relative;margin: 80px 0;}
+.new-arrival{width:100%; position:relative;margin: 80px 0;font-family:'pretendard';}
 .new-arrival-head {width:80%; margin:0 auto;display:flex;gap:15px;align-items: center;}
 .new-arrival-head h2 {font-size:48px;}
 .new-arrival-head a {transform:translateY(5px);}
@@ -74,8 +74,10 @@
 .arrival-swiper {margin-left:10%!important;margin-top:40px;}
 .new-arrival-imgbox {width:20%!important;position:relative;}
 .new-arrival-imgbox img {width:100%;border-radius:10px;}
+.new-arrival-imgbox h3 {padding:10px 0; font-size:20px;}
+.new-arrival-imgbox p {font-size: 14px;}
 
-.arrival__play {width:40px!important;position:absolute;right:10px;bottom:60px;cursor: pointer;}
+.arrival__play {width:40px!important;position:absolute;right:10px;bottom:70px;cursor: pointer;}
 
 .new-arrival-arrow {margin-top:20px;width:95%;display:flex;justify-content: space-between;}
 .new-arrival-arrow .arrival-left,
