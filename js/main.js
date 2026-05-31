@@ -30,4 +30,16 @@ document.addEventListener("DOMContentLoaded", function (){
             textSwiper.slideToLoop(currentRealIndex, 300, false); 
         }
     });
+
+
+    const arrivalSwiper = new Swiper('.arrival-swiper', {
+        slidesPerView:'auto',
+        loop:true,
+        slideToClickedSlide: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.arrival-right',
+            prevEl: '.arrival-left',
+        },
+    });
 })

@@ -36,10 +36,10 @@
 /* =========================
           DJ's PICK
 ===========================*/
-.dj-pick {width:100%;max-width:1600px;margin:160px auto; display:flex; flex-direction:column;}
+.dj-pick {width:100%;max-width:1600px;margin:80px auto; display:flex; flex-direction:column;}
 .dj-pick-header{width:100%; margin-bottom:40px;}
 .dj-pick-header h2 {font-size:48px;font-weight:600;letter-spacing:2px;}
-
+.dj-pick__title-image{opacity:0.5;}
 .dj-pick__deco-line {width:100px; height:20px; border-bottom: 6px solid #fff;}
 
 .album-swiper {width: 100%; padding-top:20px; padding-bottom:20px;}
@@ -58,3 +58,25 @@
 
 .title-underline {position:absolute; top:50%; left:50%; transform:translate(-50%,25px);width:250px;
                 height:1px; background:rgba(255,255,255,0.4);z-index: 10;pointer-events: none;}
+
+
+/* =========================
+        New-Arrival
+===========================*/
+
+.new-arrival{width:100%; position:relative;margin: 80px 0;}
+.new-arrival-head {width:80%; margin:0 auto;display:flex;gap:15px;align-items: center;}
+.new-arrival-head h2 {font-size:48px;}
+.new-arrival-head a {transform:translateY(5px);}
+
+.new-arrival-background {position:absolute;opacity:0.3;}
+
+.arrival-swiper {margin-left:10%!important;margin-top:40px;}
+.new-arrival-imgbox {width:20%!important;position:relative;}
+.new-arrival-imgbox img {width:100%;border-radius:10px;}
+
+.arrival__play {width:40px!important;position:absolute;right:10px;bottom:60px;cursor: pointer;}
+
+.new-arrival-arrow {margin-top:20px;width:95%;display:flex;justify-content: space-between;}
+.new-arrival-arrow .arrival-left,
+.new-arrival-arrow .arrival-right {background:none;border:none;cursor: pointer;}
