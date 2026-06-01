@@ -67,3 +67,57 @@
 .new-arrival-arrow {margin-top:20px;width:15%;display:flex;justify-content: space-around;margin-left:auto;}
 .new-arrival-arrow .arrival-left,
 .new-arrival-arrow .arrival-right {background:none;border:none;cursor: pointer;}
+
+
+/* =========================
+          Magazine
+===========================*/
+
+.magazine-section {padding: 80px 0;}
+.magazine-container {width:80%; margin: 0 auto;max-width:1152px;}
+
+.magazine-deco-lines {display:flex;}
+.magazine-deco-line1 {width:59px;height:2px;background:#ebe8e8;margin-right:29px;}
+.magazine-deco-line2 {width:13px; height:2px; background:#ebe8e8;}
+
+.magazine-header {margin-bottom:20px;}
+
+.magazine-inner-underline {width:100%; height:1px;background:#ebe8e8;margin-bottom:15px;}
+
+.magazine-inner-top img {width:100%;}
+.magazine-inner-middle {display:flex;gap:14px;text-align: center;}
+
+.magazine-inner-left{width:310px;margin: 0 auto;}
+.magazine-inner-left-b {font-size:45px;}
+.magazine-inner-left-s {font-size:35px;}
+.magazine-inner-left p {font-size:99px;line-height:0.8;}
+.magazine-inner-image img {width:100%;}
+
+
+.magazine-inner-middle {margin-top:14px;}
+.magazine-inner-left-deco-line1 {height:1px;margin:13px auto;}
+.magazine-inner-left-deco-line2 {height:2px;margin:14px auto;}
+.magazine-inner-left-deco-line3 {height:3px;margin:0 auto 12px;}
+.magazine-inner-left-deco-line1,
+.magazine-inner-left-deco-line2,
+.magazine-inner-left-deco-line3 { width:100%; background:#fff;display:block;}
+.magazine-inner-center img {width:100%;}
+
+
+.magazine-inner-center {text-align: left;width:310px;margin:0 auto;}
+.magazine-inner-center span {font-size:16px;line-height:1.6;display:flex; padding-bottom:20px;}
+.magazine-inner-center img {display: block;margin: 0 auto;}
+
+.magazine-inner-center-deco-line {margin: 8px 0; width:100%; height:1px; background:#ebe8e8;}
+
+.magazine-inner-right {margin: 0 auto;width:480px;}
+.magazine-inner-right img {width:100%;height:auto;}
+
+.magazine-inner-bottom {margin-top:10px;display:block;}
+.magazine-inner-bottom p {font-size:16px;}
+
+.magazine-inner-view {display:flex;align-items:center;gap:20px;}
+.magazine-ineer-view-deco-line {width:85%;height:1px;background:#fff;}
+.magazine-inner-view a {font-size:20px;text-align: center;font-family:"Pretendard";}
+.magazine-inner-view-box {display: flex;justify-content: center;align-items: center;gap: 8px;
+                width: 140px;height: 40px;border: 1px solid #fff;border-radius: 20px;}

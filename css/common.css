@@ -75,6 +75,7 @@
 body {background:#202020; font-family:'EBGaramond', 'Pretendard';color: #EBE8E8;}
 *, *:before, *:after {box-sizing: border-box;}
 a {text-decoration: none;color: inherit;}
+h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈 48px  */
 
 /* =========================
            Header
