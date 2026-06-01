@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function (){
+
+    /* =========================
+          DJ's PICK Swiper
+    ===========================*/
     const albumSwiper = new Swiper('.album-swiper', {
         effect: 'coverflow',
         grabCursor: true,
@@ -30,6 +34,10 @@ document.addEventListener("DOMContentLoaded", function (){
             textSwiper.slideToLoop(currentRealIndex, 300, false); 
         }
     });
+
+    /* =========================
+          New Arrival Swiper
+    ===========================*/
 
 
     const arrivalSwiper = new Swiper('.arrival-swiper', {
