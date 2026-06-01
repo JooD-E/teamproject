@@ -64,14 +64,14 @@
         New-Arrival
 ===========================*/
 
-.new-arrival{width:100%; position:relative;margin: 80px 0;font-family:'pretendard';}
+.new-arrival{width:100%; position:relative;margin: 80px 0;}
 .new-arrival-head {width:80%; margin:0 auto;display:flex;gap:15px;align-items: center;}
 .new-arrival-head h2 {font-size:48px;}
 .new-arrival-head a {transform:translateY(5px);}
 
 .new-arrival-background {position:absolute;opacity:0.3;}
 
-.arrival-swiper {margin-left:10%!important;margin-top:40px;}
+.arrival-swiper {margin-left:10%!important;margin-top:40px;font-family:'pretendard';}
 .new-arrival-imgbox {width:20%!important;position:relative;}
 .new-arrival-imgbox img {width:100%;border-radius:10px;}
 .new-arrival-imgbox h3 {padding:10px 0; font-size:20px;}
