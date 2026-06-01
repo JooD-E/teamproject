@@ -76,3 +76,24 @@ body {background:#202020; font-family:'EBGaramond', 'Pretendard';color: #EBE8E8;
 *, *:before, *:after {box-sizing: border-box;}
 a {text-decoration: none;color: inherit;}
 
+/* =========================
+           Header
+===========================*/
+
+.site-header {width:100%;padding:20px 0 10px;position:fixed;z-index:100;top:0;left:0;
+                transition: transform 0.3s ease-in-out, background-color 0.3s ease;}
+.site-header-inner {display:flex;width:80%;margin:0 auto; justify-content:space-between;}
+
+
+.site-header.fixed{background:#20202090;border-bottom: 1px solid #444444;backdrop-filter:blur(5px);-webkit-backdrop-filter: blur(2px);}
+.site-header.hide {transform: translateY(-100%);}
+
+.logo a img{width:60px;}
+
+.util-nav ul {display:flex;gap: 33px;}
+.util-nav ul li {margin-top:10px;margin-left:5px;}
+.util-nav ul li:last-child{margin-top:0;margin-left:0;}
+.util-nav ul li button {background:none;border:none;cursor: pointer;}
+.util-nav ul li button img {width:40px;}
+.util-nav ul li img {width:25px;}
+.util-nav li a span {font-size:1.3rem;line-height:1;font-weight:500;}

@@ -1,21 +1,6 @@
 @charset "utf-8";
 
-/* =========================
-           Header
-===========================*/
 
-.site-header {display:flex;width:80%; margin:0 auto;justify-content:space-between;padding-top:50px;
-            position:fixed;z-index:100;left:10%;}
-
-.logo a img{width:110px;}
-
-.util-nav ul {display:flex;gap: 33px;}
-.util-nav ul li {margin-top:10px;margin-left:5px;}
-.util-nav ul li:last-child{margin-top:0;margin-left:0;}
-.util-nav ul li button {background:none;border:none;cursor: pointer;}
-.util-nav ul li button img {width:40px;}
-.util-nav ul li img {width:25px;}
-.util-nav li a span {font-size:1.3rem;line-height:1;font-weight:500;}
 
 /* =========================
         hero section
@@ -79,6 +64,6 @@
 
 .arrival__play {width:40px!important;position:absolute;right:10px;bottom:70px;cursor: pointer;}
 
-.new-arrival-arrow {margin-top:20px;width:95%;display:flex;justify-content: space-between;}
+.new-arrival-arrow {margin-top:20px;width:15%;display:flex;justify-content: space-around;margin-left:auto;}
 .new-arrival-arrow .arrival-left,
 .new-arrival-arrow .arrival-right {background:none;border:none;cursor: pointer;}
