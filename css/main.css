@@ -66,7 +66,10 @@
 
 .new-arrival-arrow {margin-top:20px;width:15%;display:flex;justify-content: space-around;margin-left:auto;}
 .new-arrival-arrow .arrival-left,
-.new-arrival-arrow .arrival-right {background:none;border:none;cursor: pointer;}
+.new-arrival-arrow .arrival-right {background:none;border:none;cursor: pointer;transition: all 0.4s ease;}
+
+.new-arrival-arrow .arrival-left:hover,
+.new-arrival-arrow .arrival-right:hover {transform:scale(1.2);}
 
 
 /* =========================
@@ -118,6 +121,31 @@
 
 .magazine-inner-view {display:flex;align-items:center;gap:20px;}
 .magazine-ineer-view-deco-line {width:85%;height:1px;background:#fff;}
-.magazine-inner-view a {font-size:20px;text-align: center;font-family:"Pretendard";}
-.magazine-inner-view-box {display: flex;justify-content: center;align-items: center;gap: 8px;
-                width: 140px;height: 40px;border: 1px solid #fff;border-radius: 20px;}
+.magazine-inner-view a {font-size:20px;text-align: center;font-family:"Pretendard";display: flex;
+                        justify-content: center;align-items: center;width: 140px;height: 40px;
+                        border: 1px solid #fff;border-radius: 20px;}
+
+
+/* =========================
+          Category
+===========================*/
+
+.category-section {position:relative;}
+.category-background {position:absolute;right:0;top:40px;}
+.category-container {width:80%;margin:0 auto;}
+
+.category-header {display:flex;gap:15px;align-items: center;margin-bottom:20px;}
+.category-header img {width:100%;transform:translateY(10px);}
+
+.category-list {display: flex;flex-wrap: wrap;align-items: center;gap: 15px 0;;}
+.category-list li {display: flex;align-items: center;}
+.category-list li a{display:inline-block;padding:5px 15px;border:1px solid #fff;border-radius:20px;
+                        font-size:14px;}
+.category-list li a.c-active {background:#ffffff50;border-radius:20px;}
+
+.category-list li::after {content: "·"; margin: 0 10px; color: #ffffff;font-size: 16px;}
+.category-list li:last-child::after {display: none; }
+
+
+
+
