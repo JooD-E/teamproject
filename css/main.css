@@ -154,7 +154,7 @@
 .category-list-box button:last-child::after {display: none;} */
 
 
-.category-section { position: relative; padding: 100px 0; background-color: #1a1a1a; color: #fff; overflow: hidden; }
+.category-section { position: relative; padding: 100px 0; background-color: #1a1a1a; color: #fff;/* overflow: hidden; */}
 .category-background { position: absolute; right: 0; top: 40px; }
 .category-container { width: 80%; max-width: 1400px; margin: 0 auto; position: relative; z-index: 5; }
 
