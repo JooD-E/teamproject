@@ -60,12 +60,6 @@ document.addEventListener("DOMContentLoaded", function (){
         navigation: {
             nextEl: '.category-button-next',
             prevEl: '.category-button-prev',
-        },
-        breakpoints: {
-            // 반응형 필요시 세팅 (예: 화면이 작아지면 2개씩 보이게)
-            1024: { slidesPerView: 4 },
-            768: { slidesPerView: 3 },
-            480: { slidesPerView: 2 },
         }
     });
 
