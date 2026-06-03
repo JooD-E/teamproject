@@ -189,3 +189,19 @@
 .category-button-prev img, .category-button-next img {width: 40px;transition: transform 0.5s ease;}
 .category-button-prev:hover img,
 .category-button-next:hover img {transform:scale(1.2);}
+
+
+
+/* =========================
+            MOOD
+===========================*/
+
+
+.mood-section {padding:80px 0;background:url(../img/main/mood_background.png)no-repeat center / cover;}
+.mood-header {width:80%; margin: 0 auto;}
+.mood-header p {color:#EB681B;font-size:20px;font-family:'pretendard';}
+.mood-header__underbar {width:90px;height:2px;background:#fff;transform:translateY(-5px);}
+.mood-header__background img{opacity:0.5;}
+
+.btn-playlist {background:none;color:#fff;border:none;font-size:20px;font-family:"pretendard";}
+.mood-num {margin-right:50px;font-weight:400;}

@@ -7,6 +7,13 @@
 /* --------------------------------------------------------------------------
    [국문] Pretendard 시리즈
 -------------------------------------------------------------------------- */
+/* Regular (100) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../fonts/Pretendard-Regular.woff2') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+}
 /* Regular (400) */
 @font-face {
     font-family: 'Pretendard';
