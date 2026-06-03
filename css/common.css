@@ -98,3 +98,34 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .util-nav ul li button img {width:40px;}
 .util-nav ul li img {width:25px;}
 .util-nav li a span {font-size:1.3rem;line-height:1;font-weight:500;}
+
+
+
+/* =========================
+          Footer
+===========================*/
+
+.footer-top-section {width:100%;border-top:2px solid #ebebeb;padding-bottom:20px;
+                border-bottom:1px solid #444444;}
+.footer-top-container {display: flex;width:80%; margin:20px auto 0;align-items: center;}
+
+.footer-top__left {display:flex;}
+.footer-top__left li {margin-right:30px;font-size:14px;}
+
+.footer-top__right {display:flex;gap: 30px;align-items: center; margin-left:auto;}
+
+.footer-top__right img{width:25px;}
+
+.footer-bottom-section {width:80%;margin:20px auto;display:block;}
+
+.footer-bottom__txt {display:flex;flex-wrap:wrap;font-family:"pretendard";margin-bottom:20px;}
+.footer-bottom__txt li {padding:0 10px;font-size:14px;border-right:1px solid #fff;margin-bottom:5px;}
+
+.footer-bottom__txt li:first-child {padding:0;padding-right:10px;}
+.footer-bottom__txt li:nth-child(5) {border:none;}
+.footer-bottom__txt li:nth-child(6) {padding:0;padding-right:10px;}
+
+
+.footer-bottom__escrow {align-items: center;display:flex;}
+.footer-bottom__escrow img{width:13px;margin-right:10px;}
+.footer-bottom__escrow span{font-size:12px;line-height:12px;}
