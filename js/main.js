@@ -84,4 +84,7 @@ document.addEventListener("DOMContentLoaded", function (){
         categorySwiper.update();
         categorySwiper.slideTo(0);
     });
+
+
+
 })
