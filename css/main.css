@@ -27,7 +27,7 @@
 .dj-pick__title-image{opacity:0.5;}
 .dj-pick__deco-line {width:100px; height:20px; border-bottom: 6px solid #fff;}
 
-.album-swiper {width: 100%; padding-top:20px; padding-bottom:20px;}
+.album-swiper {width: 100%; padding-top:20px; padding-bottom:20px;max-width:1600px;}
 .album-swiper .dj-pick-slide-img {width:500px; height:500px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
                 border-radius: 10px;overflow:hidden;transition:opacity 0.3s;}
 .album-swiper .dj-pick-slide-img img {width:100%;height:100%;object-fit:cover;}
@@ -76,7 +76,7 @@
           Magazine
 ===========================*/
 
-.magazine-section {padding: 80px 0;}
+.magazine-section {padding: 80px 0;background:#1a1a1a}
 .magazine-container {width:80%; margin: 0 auto;max-width:1152px;}
 
 .magazine-deco-lines {display:flex;}
@@ -133,7 +133,7 @@
           Category
 ===========================*/
 
-.category-section { position: relative; padding: 100px 0; background-color: #1a1a1a; color: #fff;}
+.category-section { position: relative; padding: 100px 0; background-color: #202020; color: #fff;}
 .category-background { position: absolute; right: 0; top: 140px; }
 .category-container { width: 80%; max-width: 1400px; margin: 0 auto; position: relative; z-index: 5; }
 
@@ -197,7 +197,7 @@
 ===========================*/
 
 
-.mood-section {padding:80px 0;background:url(../img/main/mood_background.png)no-repeat center / cover;
+.mood-section {padding:80px 0;background:url(../img/main/mood_background.png)no-repeat center;background-size:100%100%;
                 overflow:hidden;}
 .mood-header {width:80%; margin: 0 auto;}
 .mood-header p {color:#EB681B;font-size:20px;font-family:'Pretendard';}
@@ -216,9 +216,9 @@
 .icon-play {display:inline-block;width:28px;height:28px;
             background:url(../img/main/play_inactive.png)no-repeat center / cover;margin-right:10px;}
 
-.moodtxt::after{content:'';position:absolute;bottom:-4px;left:0; width:100%;height:2px;
+.mood-txt::after{content:'';position:absolute;bottom:-4px;left:0; width:100%;height:2px;
                 background:#EB681B; transform: scaleX(0);transform-origin:left;
-                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);}
+                transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);}
 
 
 .btn-playlist.m-active .mood-txt, .btn-playlist.m-active .mood-num {color: #EB681B;}
@@ -227,8 +227,7 @@
 
 
 .mood-playlist__item {margin-left:50px;font-family:"Prentendard";display:none;grid-template-columns:1fr 1fr;
-                grid-template-areas: "info discover" "album tracklist"; column-gap:60px;row-gap:30px;
-            }
+                grid-template-areas: "info discover" "album tracklist"; column-gap:60px;row-gap:30px;}
 .mood-playlist__item.track-active {display:grid;animation: FadeInLeft 0.5s ease forwards;}
 .playlist__item-info {grid-area:info;}
 .playlist__item-info img {width:30px;transform:translate(-24px,18px)}
