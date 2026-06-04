@@ -98,6 +98,9 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
                 transition: transform 0.3s ease-in-out, background-color 0.3s ease;}
 .site-header-inner {display:flex;width:80%;margin:0 auto; justify-content:space-between;}
 
+.site-header.menu-open {background: transparent !important;backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;border-bottom: none !important;box-shadow: none !important;}
+
 
 .site-header.fixed{background:#20202090;border-bottom: 1px solid #444444;backdrop-filter:blur(5px);-webkit-backdrop-filter: blur(2px);}
 .site-header.hide {transform: translateY(-100%);}
