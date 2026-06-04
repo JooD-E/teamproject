@@ -205,8 +205,9 @@
 
 
 .mood-content {width:90%; margin-left:auto;margin-top:50px;display:flex;}
-.mood-playlist {width:25%;border-right:1px solid #ffffff50;}
-.mood-playlist ul {padding:10px 0 10px 5px ;}
+.mood-playlist {width:30%;border-right:1px solid #ffffff50;}
+.mood-playlist ul {padding:10px 0 10px 5px ;height:100%;display:flex;flex-direction:column; justify-content: space-between;}
+.mood-playlist ul li {display:flex;justify-content: center;}
 .btn-playlist {background:none;color:#fff;border:none;font-size:20px;font-family:'Pretendard';cursor: pointer;
             display:flex;align-items: center;padding:10px 20px 10px 10px;width:100%;}
 .mood-num {margin-right:50px;font-weight:200;}
@@ -215,7 +216,8 @@
             background:url(../img/main/play_inactive.png)no-repeat center / cover;margin-right:10px;}
 
 .moodtxt::after{content:'';position:absolute;bottom:-4px;left:0; width:100%;height:2px;
-                background:#EB681B; transform: scaleX(0);transform-origin:left;transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);}
+                background:#EB681B; transform: scaleX(0);transform-origin:left;
+                transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);}
 
 
 .btn-playlist.m-active .mood-txt, .btn-playlist.m-active .mood-num {color: #EB681B;}
@@ -223,8 +225,10 @@
 .btn-playlist.m-active .mood-txt::after {transform: scaleX(1);}
 
 
-.mood-playlist__item {margin-left:50px;font-family:"Prentedard";display:grid;grid-template-columns:1fr 1fr;
-                grid-template-areas: "info discover" "album tracklist"; column-gap:60px;row-gap:30px;}
+.mood-playlist__item {margin-left:50px;font-family:"Prentendard";display:none;grid-template-columns:1fr 1fr;
+                grid-template-areas: "info discover" "album tracklist"; column-gap:60px;row-gap:30px;
+            }
+.mood-playlist__item.track-active {display:grid;animation: FadeInLeft 0.5s ease forwards;}
 .playlist__item-info {grid-area:info;}
 .playlist__item-info img {width:30px;transform:translate(-24px,18px)}
 .playlist__item-info p {font-size:22px;color:#FF8A1C;}
@@ -236,16 +240,92 @@
 .playlist-album img {width:100%;}
 
 
-.mood-playlist__item a{font-size:20px;display:flex;align-items: center;grid-area:discover;position:relative;}
-.mood-playlist__item a .spotlight {width:20px;margin-right:5px;}
-.mood-playlist__item a img {margin-left:10px;width:60px;}
-.mood-playlist__item a .album-discover-background {width:420px;position:absolute;}
+.album-discover {font-size:20px;display:flex;align-items: center;grid-area:discover;position:relative;}
+.album-discover {margin-left:60px;}
+.album-discover .spotlight {width:20px;margin-right:5px;}
+.album-discover img {margin-left:10px;width:60px;}
+.mood-playlist__item a .album-discover-background {width:420px;position:absolute;opacity:0.5;position:absolute;left:-30px;}
 
 
-.playlist-album__num{font-size:14px;}
-.playlist-album__title{font-size:16px;}
-.playlist-album__time{font-size:16px;}
+.playlist-album__num{font-size:14px;margin-right:50px;}
+.playlist-album__title{font-size:16px;margin-right:auto;}
+.playlist-album__time{font-size:16px;margin-right:20px;}
 .playlist-album__img {display:inline-block;background:url(../img/main/play_inactive.png)no-repeat center / cover;
                 width:16px;height:16px;}
 
-.album-tracklist {grid-area:tracklist;}
+.album-tracklist {grid-area:tracklist;width:280px;margin-left:50px;margin-top:30px;}
+.album-tracklist li {display:flex;align-items: center;}
+.album-tracklist li span {margin-bottom:30px;}
+.album-tracklist li span:nth-child(2){white-space: nowrap;overflow:hidden;text-overflow:ellipsis;
+                                display:inline-block;max-width:125px;}
+
+
+
+
+@keyframes FadeInLeft {
+    0% {
+        opacity:0;
+        transform:translateX(-50px);
+    }
+
+    100% {
+        opacity:1;
+        transform:translateX(0);
+    }
+}
+
+/* =========================
+            ABOUT
+===========================*/
+
+.seoul-vinyl-section {display: grid;grid-template-columns: 2fr 2fr 3fr 1fr 2fr;
+    grid-template-areas:
+        "title title main main main"
+        "pat1  pat1  line desc desc"
+        "pat2  pat2  line   desc desc"
+        "sub   sub   info wave contact";
+    gap: 30px;width:90%;margin: 80px auto;max-width:1296px;}
+
+.sv-title-box    { grid-area: title; }
+.sv-main-img-box { grid-area: main; }
+.pattern1        { grid-area: pat1; }
+.pattern2        { grid-area: pat2; }
+.sv-desc-box     { grid-area: desc; }
+.sv-sub-img-box  { grid-area: sub; }
+.info-box        { grid-area: info; }
+.pattern-wave    { grid-area: wave; }
+.contact-box     { grid-area: contact; }
+.sv-line         { grid-area: line ;}
+
+.sv-title-box {display: flex;justify-content: space-between;align-items: flex-end;padding-bottom: 20px;}
+.sv-title-box h2 {font-size: 120px;line-height: 1;}
+
+.sv-main-img-box img,
+.sv-sub-img-box img {width: 100%;height: 100%;}
+
+.sv-desc-box {text-align: right;font-family:"Pretendard";}
+.sv-desc-title {display: block;font-size: 14px;margin-bottom: 15px;font-weight: bold;}
+.sv-desc-text {font-size: 14px;line-height: 1.6;color: #ccc;letter-spacing: 0.5px;}
+
+.info-box {font-size: 14px;font-style: normal;line-height: 1.5;align-items: center;display:flex;}
+.hours-list {margin-top: 10px;color: #999;}
+.info-box-deco {width:54px;height:88px;border:1px solid #EB681B;transform:translateX(50px);}
+
+.contact-box {background-color: #EB681B;padding-right: 15px;display: flex;flex-direction: column;
+    justify-content: center; align-items: flex-end;font-family:'Prentendard';font-size:16px;}
+.contact-box a {text-decoration: none;margin-top: 5px;font-size:14px;}
+
+.sv-grid-line {width:100%;height:1px;background:#fff;margin-bottom:40px;}
+.sv-grid-pattern {width:100%;height:45px;background:url(../img/main/seoul_vinyl01.png)no-repeat center /cover;}
+.pattern2 {width:100%; height:73px; background:url(../img/main/seoul_vinyl02.png)no-repeat center;
+            background-size: 100% 100%;}
+
+.sv-line {display:flex;position:relative;}
+.sv-grid-pattern2 {width:164px;height:136px;
+                background:url(../img/main/seoul_vinyl05.png)no-repeat center;background-size:100% 100%;}
+.sv-grid-line2 {width:200px;height:1px; background:#fff;position:absolute;right:-25px;}
+
+.cs-phone {font-weight:bold;}
+
+.pattern-wave {width:133px;height:88px;background: url(../img/main/seoul_vinyl06.png)no-repeat center;
+            background-size: 100% 100%;margin-top:15px;}

@@ -86,5 +86,19 @@ document.addEventListener("DOMContentLoaded", function (){
     });
 
 
+    const playlistBtns = document.querySelectorAll('.btn-playlist');
+    const playlistItems = document.querySelectorAll('.mood-playlist__item');
+
+    playlistBtns.forEach((btn, index) => {
+        btn.addEventListener('click',()=> {
+            playlistBtns.forEach(b => b.classList.remove('m-active'));
+            btn.classList.add('m-active');
+
+            playlistItems.forEach(item => item.classList.remove('track-active'));
+            playlistItems[index].classList.add('track-active');
+
+        });
+    });
+
 
 })
