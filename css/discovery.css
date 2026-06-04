@@ -1,2 +1,684 @@
 @charset "utf-8";
 
+/* ======================= 웹 폰트 ========================== */
+/* pretendard (300) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+/* ========================================================= */
+
+
+
+/* ################# top_banner #################### */
+.top_banner .banner_wrap {
+    position: relative;
+}
+
+/* ### 배너 영역 ### */
+/* 배너 wrap */
+.top_banner .banner_wrap .banner_img {
+    width: 100%;
+}
+
+/* 배너 이미지 */
+.top_banner .banner_wrap .banner_img img {
+    width: 100%;
+}
+
+/* ### 텍스트 영역 ### */
+/* 위치 조정 */
+.top_banner .banner_wrap .banner_txt {
+   position: absolute;
+   bottom: 80px; left: 60px;
+}
+
+
+/* 타이틀 */
+.top_banner .banner_txt h2 {
+    font-size: 80px;
+    font-weight: 600;
+}
+
+/* 서브 */
+.top_banner .banner_txt p {
+    font-size: 24px;
+    font-family: "Pretendard";
+    font-weight: 300;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* 데코레이션 아이콘 */
+.top_banner .banner_txt div img {
+    width: 30px;
+    position: relative;
+    top: -10px;
+}
+
+
+/* ######################## Mood Digging ############################ */
+/* 모든 영역 wrap */
+.mood_wrap {
+    width: 85%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+/* ### 타이틀 영역 ### */
+/* 타이틀 wrap */
+
+.mood_txt {
+    width: fit-content;
+    margin: 0 auto;
+
+}
+
+
+
+/* ### Mood Picker 영역 ### */
+
+/* flex용 wrapper */
+.mood_box {
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+    margin-top: 20px;
+}
+
+/* 왼쪽 카드 영역 */
+
+/* 전체 배경 */
+.album {
+    width: 35%;
+    padding: 40px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background: #0F0F0F;
+}
+
+/* 앨범 이미지 */
+.album .album_represent {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.album .album_represent img {
+    width: 90%;
+    height: 330px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 앨범 정보 */
+.album .album_info {
+   font-family: "Pretendard";
+   width: 90%;
+   margin: 10px auto;
+}
+
+/* 텍스트 */
+.album .album_info small {
+    font-size: 14px;
+    color: #FF9F2E;
+}
+
+.album .album_info h3 {
+    font-size: 25px;
+    margin: 5px 0 30px;
+    font-weight: 600;
+}
+
+
+/* 재생바 영역 */
+.album .album_title {
+    position: relative;
+}
+
+/* 앨범 제목 + 재생 아이콘 */
+.album .album_title .play {
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+
+/* 재생 버튼임을 알려주는 호버 효과 */
+.album .album_title .play img {
+   width: 28px;
+   display: inline-block;
+   vertical-align: middle;
+   margin-right: 7px;
+   transition: transform 0.25s ease, filter 0.25s ease;
+}
+
+.album .album_title .play:hover {
+    transform: translateX(4px);
+}
+
+.play:hover img {
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.55));
+}
+
+
+/* 재생 시간 */
+.album .album_title .time {
+    position: absolute;
+    right: 10px;
+    top: 28px;
+    font-size: 12px;
+    color: #F6F1EB;
+    font-size: 12px;
+}
+
+/* 재생 바 */
+.music_bar {
+    width: 95%;
+    margin: 25px auto 30px;
+    height: 3px;
+    background: #777;
+    border-radius: 999px;
+    overflow: visible;
+}
+
+/* 재생했을 때 재생바 */
+.music_bar .progress {
+    position: relative;
+    display: block;
+    width: 47%;
+    height: 100%;
+    background: #ff7a00;
+    border-radius: 999px;
+}
+
+/* 재생바 원형 */
+.music_bar .progress::after {
+    content: "";
+    position: absolute;
+    right: -4px;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+    background: #ff7a00;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+/* 앨범 버튼 */
+.album_btn {
+    display: block;
+    width: 95%;
+    height: 50px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    border-radius: 999px;
+    font-size: 18px;
+   
+}
+
+.album_btn:hover {
+    /* background: rgb(255, 255, 255,0.7);
+    border: none;
+    color: #111; */
+
+     border: #FF9F2E solid 1px;
+    color: #FF9F2E;
+}
+
+/* ### mood picker 박스 영역 ### */
+
+/* 오른쪽 Mood Picker */
+.mood_picker {
+    width: 65%;
+    padding: 20px 30px 10px;
+    border: 1px solid #333;
+    border-radius: 15px;
+    background: #0F0F0F;
+    font-family: "Pretendard";
+
+    display: flex;
+    flex-direction: column;
+}
+
+/* 장르 제목 줄 */
+.genre {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(4, 1fr);
+    align-items: center;
+    border-bottom: 1px solid #252525;
+    padding-bottom: 10px;
+}
+
+.genre span {
+    position: relative;
+    padding: 5px 0 14px;
+    color: #F6F1EB;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* 버튼 활성화 상태 글씨 밑줄 */
+.genre span.active {
+    color: #ff9f2e;
+}
+
+.genre span.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 9px;
+    transform: translateX(-50%);
+    width: 55%;
+    height: 2px;
+    background: #FF9F2E;
+    
+}
+
+/* 무드 행 */
+.mood {
+    display: grid;
+    grid-template-columns: 1.6fr repeat(4, 1fr);
+    flex: 1;
+    height: auto;
+    border-bottom: 1px solid #252525;
+}
+
+.mood:last-child {
+    border-bottom: 0;
+}
+
+/* 왼쪽 무드 설명 */
+.mood_label {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.mood_icon {
+    width: 28px;
+}
+
+.mood_icon img {
+    width: 100%;
+    display: block;
+}
+
+.mood_label strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #F6F1EB;
+}
+
+.mood_label p {
+    margin-top: 5px;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+/* 선택 버튼 칸 */
+.mood button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    border-left: 1px solid #252525;
+    background: none;
+    cursor: pointer;
+}
+
+/* 버튼 이미지 */
+.mood button img {
+    width: 85px;
+    transition: 0.25s;
+}
+
+.mood button:hover img {
+    transform: scale(1.08);
+}
+
+.mood button.active img {
+    transform: scale(1.12);
+}
+
+
+/* ##################### You might also like########################### */
+.might {
+    width: 85%;
+    margin: 130px auto;
+}
+
+/* 타이틀 */
+.might_txt {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.might_txt h2 {
+   font-size: 48px;
+}
+
+.might_txt img {
+    display: block;
+}
+
+.divider {
+    width: 100px;
+    height: 2px;
+    background: #777;
+}
+
+/* 전체보기 버튼 */
+.might_title a {
+    font-family: "Pretendard";
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin-left: auto;
+}
+
+/* 화살표 */
+.might_title a div {
+    width: 15px;
+}
+
+.might_title a img {
+    margin-left: 5px;
+    width: 100%;
+}
+
+
+/* 앨범 리스트 */
+.might_list {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    cursor: grab;
+    padding: 40px 0;
+    scrollbar-width: none;
+}
+
+/* 5개 + 다음 앨범 살짝 보이게 */
+.might_list li {
+    flex: 0 0 18%;
+    user-select: none;  /* 텍스트가 파랗게 선택되거나 이미지가 끌려가는 것 방지 */
+    position: relative;
+}
+
+/* 드래그 중 */
+.might_list.dragging {
+    cursor: grabbing;
+    scroll-behavior: auto;
+}
+
+.might_list.dragging li {
+    pointer-events: none;
+}
+
+/* 앨범 이미지 */
+.might_list li .might_album {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+}
+
+/* 재생 아이콘 */
+.might_list li .might_play {
+    width: 35px;
+    position: absolute;
+    bottom: 100px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* 앨범 텍스트 */
+.might_list li div {
+    margin-top: 14px;
+    font-family: "Pretendard";
+}
+
+/* 제목 */
+.might_list li h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 가수/년도 */
+.might_list li p {
+    margin-top: 5px;
+    color: #9c9c9c;
+    font-size: 14px;
+}
+
+/* 장르 */
+.might_list li small {
+    display: block;
+    margin-top: 20px;
+    font-size: 13px;
+}
+
+/* 화살표 */
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow img {
+    width: 30px;
+    display: block;
+    cursor: pointer;
+}
+
+/* 앨범 끝에 도달하면 비활성 */
+.arrow img.disabled {
+    opacity: 0.35;
+    pointer-events: none;
+}
+
+/* ######################## Soundtrack ############################ */
+
+.soundtrack {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100px;
+}
+
+
+/* 타이틀 */
+.sound_txt {
+    width: fit-content;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.sound_txt h2 {
+    font-size: 48px;
+}
+
+.sound_txt img {
+    display: block;
+}
+
+
+/* sticky 동작 영역 */
+.soundtrack_inner {
+    display: flex;
+    position: relative;
+    width: 100%;
+    font-family: "Pretendard";
+}
+
+/* 왼쪽 고정 텍스트 영역 */
+.left_box {
+    position: sticky;
+    top: 0;
+    width: 30%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 왼쪽 텍스트 */
+.left_box .content {
+    position: absolute;
+    width: 50%;
+    opacity: 0;
+    transition: 0.5s ease;
+    pointer-events: none;
+}
+
+.left_box .content.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.left_box .time {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.left_box .tag {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.left_box .sub {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45;
+    color: darkgray;
+}
+
+/* 오른쪽 영역 */
+.right_box {
+    width: 65%;
+}
+
+/* 시간대별 한 화면 */
+.time_block {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5%;
+}
+
+/* 앨범 3개 */
+.album_wrap {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.album_card {
+    width: 260px;
+    flex-shrink: 0;
+    transition: 0.4s;
+}
+
+.album_card:hover {
+    transform: translateY(-10px);
+}
+
+.album_card img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* 앨범 텍스트 */
+.album_card div {
+    margin-top: 10px;
+}
+
+/* 제목 */
+.album_card h4 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* 가수/년도 */
+.album_card p {
+    margin-top: 6px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #9c9c9c;
+}
+
+/* 장르 */
+.album_card small {
+    display: block;
+    margin-top: 22px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/* ### 하단 ### */
+/* 텍스트 */
+.Sbtn_wrap {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.Sbtn_wrap h3 {
+    font-size: 56px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.Sbtn_wrap p {
+    font-size: 24px;
+}
+
+/* 버튼 */
+.Sbtn_wrap .Sbtn {
+    font-size: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 330px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    margin: 60px auto;
+}
+
+.Sbtn_wrap .Sbtn:hover {
+    /* background: rgb(255, 255, 255,0.7);
+    border: none;
+    color: #111; */
+
+    border: #FF9F2E solid 1px;
+    color: #FF9F2E;
+}
