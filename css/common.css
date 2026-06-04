@@ -99,7 +99,11 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .site-header-inner {display:flex;width:80%;margin:0 auto; justify-content:space-between;}
 
 .site-header.menu-open {background: transparent !important;backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;border-bottom: none !important;box-shadow: none !important;}
+    -webkit-backdrop-filter: none !important;border-bottom: none !important;box-shadow: none !important;
+    pointer-events: none;}
+.site-header.menu-open .btn-hamburger,
+.site-header.menu-open a,
+.site-header.menu-open .btn-search {pointer-events: auto;}
 
 
 .site-header.fixed{background:#20202090;border-bottom: 1px solid #444444;backdrop-filter:blur(5px);-webkit-backdrop-filter: blur(2px);}
@@ -113,6 +117,7 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .util-nav ul li button {background:none;border:none;cursor: pointer;}
 .util-nav ul li button img {width:40px;}
 .util-nav ul li img {width:25px;}
+.btn-search {cursor: pointer;}
 .btn-search img {width:25px!important;}
 
 /* =========================
@@ -159,7 +164,7 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .depth2 {font-size:14px;font-weight:100;margin-top:20px;margin-left:30px;}
 .depth2 a {margin-right:10px;}
 .depth2 a:hover {text-decoration:underline;}
-.menu-footer {position:absolute;bottom:5%;left:35%;}
+.menu-footer {position:absolute;bottom:5%;left:32%;}
 
 .menu-log {position:absolute;right:5%;bottom:5%;}
 .menu-log .menu-log-out {display:none;}
