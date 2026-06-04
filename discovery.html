@@ -6,9 +6,487 @@
     <title>Seoul Vinyl</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/discovery.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/common.js"></script>
+
+
     
 </head>
 <body>
+  
+<!-- ======================================================
+                Header  -> common.css  common.js 연결 /
+    =========================================================-->
+    <header class="site-header">
+        <div class="site-header-inner">
+            <h1 class="logo">
+                <a href="/main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+            </h1>
+
+            <nav class="util-nav">
+                <ul>
+                    <li><a href="#"><span>Login</span></a></li>
+                    <li>
+                        <a href="#">
+                            <img src="img/common/Group.png" alt="레코드 이미지">
+                        </a>
+                    </li>
+                    <li><a href="#"><img src="img/common/user.png" alt="내 정보"></a></li>
+                    <li><button type="button"><img src="img/common/hamburger.png" alt="햄버거 메뉴"></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+<!-- =========================================================
+                          Top banner
+=============================================================-->
+<section class="top_banner">
+    <div class="banner_wrap">
+       <div class="banner_img"><img src="img/dicovery/top_banner.png" alt="배너"></div>
+       <div class="banner_txt">
+           <h2>Discover <br> Your Sound</h2>
+           <div>
+             <img src="img/dicovery/icon_point.png" alt="아이콘">
+             <p>Find the perfect record for your mood.</p>
+          </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- =========================================================
+                        Mood digging
+=============================================================-->
+<section class="mood_digging">
+        
+  <div class="mood_wrap"> <!-- ### 전체 div 시작 ### -->
+
+  <div class="mood_txt">
+    <h2>Mood Digging</h2>
+    <div class="divider"></div>
+    <img src="img/dicovery/decoration.png" alt="이미지">
+  </div>
+
+    <div class="mood_box"> <!-- ### 왼쪽 오른쪽 영역 flex용 wrap ### -->
+
+      <!-- ### 왼쪽 결과 카드 시작 ### -->
+      <div class="album">
+
+         <div class="album_represent"><img src="img/dicovery/mood01.png" alt="앨범 이미지"></div>
+
+         <div class="album_info">
+            <small>RECOMMENDATION</small>
+            <h3>SEOUL DRIVE X CITY POP</h3>
+
+            <div class="album_title">
+               <span class="play"><img src="img/dicovery/icon_play.png" alt="재생아이콘">MUTT</span>
+               <span class="time">0:24 / 1:00</span>
+               <div class="music_bar"><span class="progress"></span></div>
+            </div>
+
+            <a href="#" class="album_btn">VIEW ALBUM</a>
+        </div>
+
+      </div>  <!-- ### 왼쪽 결과 카드 종료 ### -->
+
+      <!-- ### 오른쪽 선택 영역 시작 ### -->
+      <div class="mood_picker">
+
+        <!-- 장르 열 -->
+        <div class="genre">
+          <span></span>
+          <span data-genre="jazz">JAZZ</span>
+          <span data-genre="rock">ROCK</span>
+          <span data-genre="citypop" class="active">CITY POP</span>
+          <span data-genre="funk">FUNK</span>
+        </div>
+
+        <!-- 무드 행 01 --- Rainy Night -->
+        <div class="mood">
+          <div class="mood_label">
+            <span class="mood_icon"><img src="img/dicovery/icon_rainy.png" alt="아이콘"></span>
+            <div>
+              <strong>RAINY NIGHT</strong>
+              <p>Rain outside,<br>thoughts inside.</p>
+            </div>
+          </div>
+
+          <button type="button" data-mood="rainy" data-genre="jazz"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="rainy" data-genre="rock"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="rainy" data-genre="citypop"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="rainy" data-genre="funk"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+        </div>
+
+        <!-- 무드 행 02 --- Seoul Drive -->
+        <div class="mood">
+          <div class="mood_label">
+            <span class="mood_icon"><img src="img/dicovery/icon_drive.png" alt="아이콘"></span>
+            <div>
+              <strong>SEOUL DRIVE</strong>
+              <p>City lights and<br>a smooth ride.</p>
+            </div>
+          </div>
+
+          <button type="button" data-mood="drive" data-genre="jazz"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="drive" data-genre="rock"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="drive" data-genre="citypop" class="active"><img src="img/dicovery/button_active.png" alt="활성버튼"></button>
+          <button type="button" data-mood="drive" data-genre="funk"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+        </div>
+
+
+        <!-- 무드 행 03 --- Summer Mood -->
+        <div class="mood">
+          <div class="mood_label">
+            <span class="mood_icon"><img src="img/dicovery/icon_summer.png" alt="아이콘"></span>
+            <div>
+              <strong>SUMMER MOOD</strong>
+              <p>Warm air,<br>golden light.</p>
+            </div>
+          </div>
+
+          <button type="button" data-mood="summer" data-genre="jazz"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="summer" data-genre="rock"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="summer" data-genre="citypop"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="summer" data-genre="funk"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+        </div>
+
+        <!-- 무드 행 04 --- Sundau Morning -->
+        <div class="mood">
+          <div class="mood_label">
+            <span class="mood_icon"><img src="img/dicovery/icon_sun.png" alt="아이콘"></span>
+            <div>
+              <strong>SUNDAY MORNING</strong>
+              <p>Lazy, bright,<br>and unhurried.</p>
+            </div>
+          </div>
+
+          <button type="button" data-mood="sunday" data-genre="jazz"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="sunday" data-genre="rock"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="sunday" data-genre="citypop"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="sunday" data-genre="funk"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+        </div>
+
+         <!-- 무드 행 05 --- Late Coffee -->
+        <div class="mood">
+          <div class="mood_label">
+            <span class="mood_icon"><img src="img/dicovery/icon_coffee.png" alt="아이콘"></span>
+            <div>
+              <strong>LATE COFFEE</strong>
+              <p>Slow hours,<br>still awake.</p>
+            </div>
+          </div>
+
+          <button type="button" data-mood="coffee" data-genre="jazz"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="coffee" data-genre="rock"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="coffee" data-genre="citypop"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+          <button type="button" data-mood="coffee" data-genre="funk"><img src="img/dicovery/button_default.png" alt="비활성버튼"></button>
+        </div>
+
+      </div>  <!-- ### 오른쪽 선택 영역 종료 ### -->
+
+    </div>  <!-- ### mood wrap 종료 ### -->
+
+  </div>  <!-- ### 전체 div 종료 ### -->
+
+</section>
+
+<!-- ========================================================
+                  You might also like
+===============================================================-->
+<section class="might">
+  <div class="might_title">
+    <div class="might_txt">
+      <h2>You might also like</h2>
+      <div class="divider"></div>
+      <img src="img/dicovery/decoration.png" alt="이미지">
+    </div>
     
+    <a href="product.html">VIEW ALL
+      <div><img src="img/dicovery/arrow_right.png" alt="전체보기 화살표"></div>
+    </a>
+  </div>
+
+  <ul class="might_list">
+    <li>
+      <img class="might_album" src="img/dicovery/might01.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Son Of Spergy</h3>
+        <p>Daniel Caesar / 2025</p>
+        <small>R&B</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might02.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>NEVER ENOUGH</h3>
+        <p>Daniel Caesar / 2023</p>
+        <small>R&B</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might03.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>SOS</h3>
+        <p>SZA / 2022</p>
+        <small>R&B</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might04.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Sweet Insomnia</h3>
+        <p>Gallant / 2019</p>
+        <small>R&B / Soul / Pop</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might05.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Past Won't Leave My Bed</h3>
+        <p>Joji / 2025</p>
+        <small>Rock / Pop</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might06.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Case Study 01</h3>
+        <p>Daniel Caesar / 2019</p>
+        <small>R&B / Soul / Pop</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might07.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Starboy</h3>
+        <p>The Weekend / 2016</p>
+        <small>R&B / Soul / Pop</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might09.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Forevermore</h3>
+        <p>행성 / 2025</p>
+        <small>R&B/Pop</small>
+      </div>
+    </li>
+    <li>
+      <img class="might_album" src="img/dicovery/might08.jpg" alt="앨범 이미지">
+      <img class="might_play" src="img/dicovery/icon_play_white.png" alt="재생아이콘">
+      <div>
+        <h3>Don't feel sad</h3>
+        <p>Whiteusedsocks / 2017</p>
+        <small>Rock / Kpop</small>
+      </div>
+    </li>
+  </ul>
+
+  <div class="arrow">
+    <img src="img/dicovery/arrow_prev_circle.png" alt="이전화살표">
+    <img src="img/dicovery/arrow_next_circle.png" alt="다음화살표">
+  </div>
+  
+</section>
+
+
+<!-- ========================================================
+                 The soundtrack of your day
+===============================================================-->
+<section class="soundtrack">
+  <div class="sound_txt">
+    <h2>The Soundtrack of Your Day</h2>
+    <div class="divider"></div>
+    <img src="img/dicovery/decoration.png" alt="이미지">
+  </div>
+
+  <div class="soundtrack_inner">
+    <div class="left_box">
+      <div class="content active" data-time="morning">
+        <span class="time">08 : 00 AM</span>
+        <h3 class="tag">#산뜻한아침 #출근길</h3>
+        <p class="sub">잠을 깨우는 산뜻한 어쿠스틱</p>
+      </div>
+
+      <div class="content" data-time="afternoon">
+        <span class="time">04 : 00 PM</span>
+        <h3 class="tag">#나른한오후 #시티팝</h3>
+        <p class="sub">지루한 오후를 깨우는<br>청량한 사운드</p>
+      </div>
+
+      <div class="content" data-time="midnight">
+        <span class="time">02 : 00 AM</span>
+        <h3 class="tag">#새벽감성 #방불끄고</h3>
+        <p class="sub">깊은 밤, 음악과 나만 남는 시간</p>
+      </div>
+    </div>
+
+    <div class="right_box">
+      <div class="time_block" data-target="morning">
+        <ul class="album_wrap">
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack0.png" alt="In Between Dreams 앨범 이미지">
+            <div>
+              <h4>In Between Dreams</h4>
+              <p>Jack Johnson / 2005</p>
+              <small>Acoustic / Folk Pop</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack01.png" alt="Corinne Bailey Rae 앨범 이미지">
+            <div>
+              <h4>Corinne Bailey Rae</h4>
+              <p>Corinne Bailey Rae / 2006</p>
+              <small>Acoustic Soul / R&B</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack03.png" alt="We Sing. We Dance. We Steal Things. 앨범 이미지">
+            <div>
+              <h4>We Sing. We Dance.<br>We Steal Things.</h4>
+              <p>Jason Mraz / 2008</p>
+              <small>Acoustic Pop</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="time_block" data-target="afternoon">
+        <ul class="album_wrap">
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack04.png" alt="Timely 앨범 이미지">
+            <div>
+              <h4>Timely!!</h4>
+              <p>Anri / 1983</p>
+              <small>J-Pop</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack05.png" alt="빛과 소금 Vol.1 앨범 이미지">
+            <div>
+              <h4>빛과 소금 Vol.1</h4>
+              <p>빛과 소금 / 1990</p>
+              <small>Fusion Jazz</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack06.png" alt="Hard Candy 앨범 이미지">
+            <div>
+              <h4>Hard Candy</h4>
+              <p>Ned Doheny / 1976</p>
+              <small>Yacht Rock</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="time_block" data-target="midnight">
+        <ul class="album_wrap">
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack07.png" alt="Chet Baker Sings 앨범 이미지">
+            <div>
+              <h4>Chet Baker Sings</h4>
+              <p>Chet Baker / 1956</p>
+              <small>Cool Jazz</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack08.png" alt="Come Away With Me 앨범 이미지">
+            <div>
+              <h4>Come Away With Me</h4>
+              <p>Norah Jones / 2002</p>
+              <small>Acoustic Jazz / Pop</small>
+            </div>
+          </li>
+
+          <li class="album_card">
+            <img src="img/dicovery/soundtrack09.png" alt="Waltz for Debby 앨범 이미지">
+            <div>
+              <h4>Waltz for Debby</h4>
+              <p>Bill Evans Trio / 1962</p>
+              <small>Jazz (Piano Trio)</small>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div> <!--오른쪽 앨범리스트 wrap 종료-->
+  </div> <!--왼쪽+오른쪽 전체 wrap 종료-->
+
+  <div class="Sbtn_wrap">
+    <h3>Find Your Own Soundtrack</h3>
+    <p>당신의 모든 시간에 음악이 머물기를</p>
+    <a class="Sbtn" href="product.html">EXPLORE ALL VINYLS</a>
+  </div>
+
+</section>
+
+<!-- ======================================================
+                Footer  -> common.css 연결 
+    =========================================================-->
+
+    <footer>
+        <div class="footer-top-section">
+            <div class="footer-top-container">
+                <ul class="footer-top__left">
+                    <li><a href="#"><strong>문의</strong></a></li>
+                    <li><a href="#"><strong>이용약관</strong></a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#"><strong>사업자정보확인</strong></a></li>
+                </ul>
+                
+                <ul class="footer-top__right">
+                    <li><a href="#"><img src="img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-section">
+                <ul class="footer-bottom__txt">
+                    <li>상호 : 주식회사 서울바이닐(SEOUL VINYL Co.,Ltd)</li>
+                    <li>대표 : 이진욱</li>
+                    <li>개인정보관리책임자 : 이진욱</li>
+                    <li>전화 : 02-792-3110</li>
+                    <li>이메일 : whatsupjin@hanmail.net</li>
+                    <li>주소 : 서울특별시 용산구 신흥로 30, 1층/2층</li>
+                    <li>사업자등록번호 : 713-81-02189</li>
+                    <li>통신판매 : 제 2020-서울용산-2144호</li>
+                </ul>
+
+
+            <div class="footer-bottom__escrow">
+                <img src="img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
+                <span>안전구매(에스크로) 서비스 가맹점</span>
+            </div>
+
+        </div>
+    </footer>
+
+
+
+    <script src="js/discovery.js"></script>
 </body>
 </html>
