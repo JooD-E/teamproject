@@ -6,9 +6,526 @@
     <title>Seoul Vinyl</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    
+    <link rel="stylesheet" href="css/about.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
 </head>
 <body>
-    
+    <!-- ======================================================
+                Header  -> common.css  common.js 연결 /
+    =========================================================-->
+    <header class="site-header">
+        <div class="site-header-inner">
+            <h1 class="logo">
+                <a href="/main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+            </h1>
+
+            <nav class="util-nav">
+                <ul>
+                    <li>
+                        <button type="button" class="btn-search">
+                        <img src="img/common/search.png" alt="검색 버튼">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/common/Group.png" alt="레코드 이미지">
+                        </a>
+                    </li>
+                    <li><a href="#"><img src="img/common/user.png" alt="내 정보"></a></li>
+                    <!-- <li>
+                        <button type="button" class="btn-hamburger">
+                            <img src="img/common/hamburger.png" alt="햄버거 메뉴">
+                        </button>
+                    </li> -->
+                    <li>
+                        <button type="button" class="btn-hamburger" aria-label="메뉴 열기/닫기">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ======================================================
+                MENU  -> common.css  common.js 연결 /
+    =========================================================-->
+
+    <div class="full-page-menu">
+        <!-- <button type="button" class="close-menu-btn">
+            <img src="img/common/close.png" alt="메뉴 닫기 버튼">
+        </button> -->
+
+        <div class="menu-container">
+            <div class="menu-inner">
+                <nav class="menu-util-nav" aria-label="사용자 유틸 메뉴">
+                    <ul>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">My page</a></li>
+                        <li><a href="#">Order</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="main-menu-nav">
+                    <ul>
+                        <li>
+                            <span class="main-menu-num">01</span>
+                            <a href="#" class="depth1">SHOP</a>
+                            <div class="depth2">
+                                <a href="#">ALL RECOREDS</a>
+                                <a href="#">NEW ARRIVAL</a>
+                                <a href="#">DJ'S PICK</a>
+                                <a href="#">GENRE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">02</span>
+                            <a href="#" class="depth1">DISCOVER</a>
+                            <div class="depth2">
+                                <a href="#">SEOUL DRIVE</a>
+                                <a href="#">RAINY NIGHT</a>
+                                <a href="#">SUNDAY MORNING</a>
+                                <a href="#">SUMMER MOOD</a>
+                                <a href="#">LATE COFFEE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">03</span>
+                            <a href="#" class="depth1">ABOUT US</a>
+                            <div class="depth2">
+                                <a href="#">BRAND STORY</a>
+                                <a href="#">STORE INFO</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="menu-footer">
+                    <h3>Seoul Vinyl</h3>
+                    <p>Contact Us</p>
+                    <a href="#">Instagram @seoulvinyl</a>
+                </div>
+            </div>
+
+            <div class="menu-log">
+                <a class="menu-log-in" href="#">
+                    <img src="img/common/login.png" alt="로그인 하기">
+                    <p>Login</p>
+                </a>
+                <a class="menu-log-out" href="#">
+                    <img src="img/common/logout.png" alt="로그아웃 하기">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <section id="main">
+        <span class="line01"></span>
+        <h4 class="text-seoul">SEOUL</h4>
+        <img class="L01" src="img/about/L01.png" alt="">
+        <img class="L02" src="img/about/L02.png" alt="">
+        <img class="L03" src="img/about/L03.png" alt="">
+        <span class="line02"></span>
+        <span class="Rtg01"></span>
+        <span class="Rtg02"><img src="img/about/Rectangle01.png" alt=""></span>
+        <span class="Rtg03"></span>
+        <span class="line03"></span>
+        <h4 class="text-vinyl">VINYL</h4>
+        <span class="Rtg04"><img src="img/about/Rectangle02.png" alt=""></span>
+    </section>
+
+    <section id="about" class="fade-up">
+        <div class="about-info">
+            <div class="info-left">
+                <div class="main-img">
+                <img src="img/about/image_01.jpg" alt="" id="mainImg">
+                <button class="info-prev"><img src="img/about/info-prev.png" alt=""></button>
+                <button class="info-next"><img src="img/about/info-next.png" alt=""></button>
+                </div>
+                <div class="thumb-list">
+                <img src="img/about/image_01.jpg" alt="" class="thumb active">
+                <img src="img/about/image_02.jpg" alt="" class="thumb">
+                <img src="img/about/image_03.jpg" alt="" class="thumb">
+                <img src="img/about/image_04.jpg" alt="" class="thumb">
+                <img src="img/about/image_05.jpg" alt="" class="thumb">
+                <img src="img/about/image_06.jpg" alt="" class="thumb">
+                <img src="img/about/image_07.jpg" alt="" class="thumb">
+                <img src="img/about/image_08.jpg" alt="" class="thumb">
+                <img src="img/about/image_09.jpg" alt="" class="thumb">
+                </div>
+            </div>
+            <div class="info-right">
+                <h2>2015년부터 LP 판매와 바를<br>함께 운영하는 서울 바이닐입니다.</h2>
+                <p>
+                    어릴 때 레코드 가게에서 아르바이트를 하면서 LP를 모으기<br>
+                    시작했습니다. LP 직접 제작하고, LP판매와 바를 함께 운영하고<br>
+                    있습니다. 1층에서 마시고, 2층에서 고르세요.
+                </p>
+                <ul class="feature-list">
+                <li>
+                    <p class="feature-title">약 10만 장 보유</p>
+                    <p>1층 4,000~5,000장, 2층 2~3만 장.<br> 개인 소장 · 창고 포함 약 10만 장.</p>
+                </li>
+                <li>
+                    <p class="feature-title">LP 바 운영</p>
+                    <p>원하는 판을 고르고 그 자리에서<br>들을 수 있습니다.</p>
+                </li>
+                <li>
+                    <p class="feature-title">직접 제작 경험</p>
+                    <p>서울 바이닐 이름으로<br>LP를 직접 기획 · 제작했습니다.</p>
+                </li>
+                <li>
+                    <p class="feature-title">세 가지 상태 확인</p>
+                    <p>재킷 · 내지 · 판 상태, 세 가지<br>모두 확인 후 취급합니다.</p>
+                </li>
+                <li>
+                    <p class="feature-title">입문자 환영</p>
+                    <p>처음이어도 괜찮습니다.<br>고르는 법부터 안내해드립니다.</p>
+                </li>
+                </ul>
+            </div>
+            <p class="about-desc">어릴 때 레코드 가게 아르바이트를 하다 LP를 처음 접했습니다. 바늘이 판 위를 지나는 순간, 갖고 있던 구슬과 딱지를 전부 친구들에게 나눠주고 LP를 모으기 시작했습니다. 버려진 LP를 주워 오고, 직접 만들기도 했습니다. 그 연장선에서 지금 이 가게가 있습니다. LP가 좋은 건 음질 때문만이 아닙니다. 음색 속에 가수의 감성이 담겨 있어 같은 곡도 다르게 다가옵니다. 재킷, 내지, 판 상태 세 가지를 모두 살피는 것도 그 이유입니다. 레트로 트렌드와 함께 LP가 다시 주목받고 있지만, 한국엔 아직 프리미엄 LP 문화가 없습니다. 좋은 음악은 그만한 가치로 대접받아야 한다고 생각합니다.</p>
+        </div>
+        <span class="BG01"><img class="BG01" src="img/about/Rectangle01.png" alt=""></span>
+    </section>
+
+    <section id="map" class="fade-up">
+        <h2 class="title">Listening Room &amp; Store Map</h2>
+        <div class="title-underline"><img src="img/about/title-under.png" alt=""></div>
+
+        <div class="map-wrapper">
+            <!--
+            <div id="kakao-map"></div>
+            <div class="map-fallback" id="map-fallback" style="display:none;">지도를 불러오는 중입니다…</div>
+            <div class="map-controls">
+                <a class="map-btn" href="https://map.kakao.com/link/to/서울바이닐,37.5384,126.9646" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
+                </svg>
+                길 찾기
+                </a>
+                <a class="map-btn" href="https://map.kakao.com/?q=서울+용산구+신흥로+30" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+                </svg>
+                지도 앱으로 보기
+                </a>
+            </div>
+            -->
+        </div>
+
+        <div class="store-header">
+            <div>
+                <div class="store-name-row">
+                <span class="store-name">Seoul Vinyl</span>
+                <span class="store-tag">바(BAR)</span>
+                </div>
+                <div class="store-address">서울 용산구 신흥로 30 1층</div>
+            </div>
+            <div class="store-direction">
+                용산구 신흥로 30 해방촌 메인 골목을 따라 올라오시다가 보면 첫 번째 사거리 오른쪽에 위치하고 있습니다
+            </div>
+        </div>
+
+        <p class="store-desc">
+            서울 해방촌 골목 안에 자리한 서울바이닐은 1층 Vinyl Bar, 2층 Vinyl Shop으로 구성된 LP 전문 공간입니다. 2층 샵에는 4,000장 이상의 LP가 장르별로 채워져 있어 직접 한 장씩 꺼내보며 원하는 판을 고르는 디깅을 즐길 수 있습니다. 흑인음악, 시티팝, 국내 가요, 재즈 등 장르 구분 없이 폭넓은 컬렉션을 보유하고 있으며, 희귀 음반부터 최신 한정판까지 다양하게 갖추고 있습니다. 1층 바에서는 DJ가 직접 선곡한 LP 음악을 들으며 음료와 식사를 즐길 수 있습니다. 스트리밍과는 다른, 아날로그 사운드를 공간 전체로 느낄 수 있는 곳입니다. LP가 처음이라면 방문 전 인스타그램 DM으로 문의하거나, 매장에서 사장님께 직접 추천을 받아보는 것도 좋은 방법입니다.
+        </p>
+    </section>
+
+    <section id="gallery" class="fade-up">
+        <h2 class="title">GALLERY<span>@seoulvinyl</span></h2>
+        <div class="title-underline"><img src="img/about/title-under.png" alt=""></div>
+
+        <ul class="gallerylist">
+            <li
+                data-img="img/about/seoulvinylIG01.jpg"
+                data-likes="좋아요 72개"
+                data-time="4월 21일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DXYvhUyE6J3/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;Ryuichi Sakamoto 사카모토 류이치 LP - 1996 30th Anniversary Edition 리마스터 한정판 Vinyl&#10;&#10;가격 : 91,500원&#10;판매 기간 : 2026년 4월 21일부터 재고 소진 시까지&#10;배송 : 2026년 5월 중순 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG01.jpg" alt="사카모토 류이치 LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG02.jpg"
+                data-likes="좋아요 74개"
+                data-time="4월 13일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DXDqHaEAIbg/"
+                data-caption="🌟 서울바이닐 제작 🌟&#10;&#10;DEUX Rise Vinyl Album : 10inch Limited Edition 500장 한정&#10;&#10;K-POP의 원류, 듀스의 정신이 시간을 넘어 다시 이어집니다.&#10;AI 기술과 이현도의 프로듀싱이 만난 30년 만의 기록, 10인치 45 RPM 사양으로 제작된 한정판 LP를 공개합니다.&#10;&#10;가격 : 45,000원&#10;판매 기간 : 2026년 4월 13일 2시부터 재고 소진 시까지&#10;배송 : 2026년 4월 17일 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;사인반 50장은 듀스 오피셜에서만 구매 가능합니다.&#10;https://www.deuxofficial.com/shop/kr/products/71&#10;&#10;감사합니다^^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG02.jpg" alt="DEUX 듀스 LP 한정판"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG03.jpg"
+                data-likes="좋아요 49개"
+                data-time="4월 3일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DWqIgKTgPvf/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;주혜린 Hyelyn Joo LP - Remake Japan Edition Vinyl&#10;&#10;가격 : 61,500원&#10;판매 기간 : 2026년 4월 3일부터 재고 소진 시까지&#10;배송 : 2026년 7월 초 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG03.jpg" alt="주혜린 LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG04.jpg"
+                data-likes="좋아요 35개"
+                data-time="3월 27일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DWYUcY2AHiE/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;CORTIS 코르티스 LP - The 2nd EP GREENGREEN Vinyl&#10;&#10;가격 : 34,000원&#10;판매 기간 : 2026년 3월 27일부터 재고 소진 시까지&#10;배송 : 2026년 5월 5일 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG04.jpg" alt="CORTIS LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG05.jpg"
+                data-likes="좋아요 87개"
+                data-time="3월 20일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DWGCqbOgBeW/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;EK 이케이 LP - YAHO clear red vinyl&#10;&#10;가격 : 45,500원&#10;판매 기간 : 2026년 3월 20일 ~ 3월 30일&#10;배송 : 2026년 5월 15일 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG05.jpg" alt="EK 이케이 LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG06.jpg"
+                data-likes="좋아요 52개"
+                data-time="3월 19일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DWD6OK4gJFD/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;Kanye West 칸예 웨스트 LP - Bully Vinyl &amp; Cassette Tape&#10;&#10;Vinyl 가격 : 47,000원&#10;Cassette Tape 가격 : 35,000원&#10;판매 기간 : 2026년 3월 19일부터 재고 소진 시까지&#10;배송 : 2026년 4월 말 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG06.jpg" alt="칸예 웨스트 LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG07.jpg"
+                data-likes="좋아요 131개"
+                data-time="3월 16일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DV8B1v-APSO/"
+                data-caption="✨ 예약 판매 ✨&#10;&#10;백예린 LP - 정규 3집 FLASH AND CORE Vinyl&#10;&#10;가격 : 70,000원&#10;판매 기간 : 2026년 3월 16일부터 재고 소진 시까지&#10;배송 : 2026년 8월 3일 발매 이후 배송 예정&#10;&#10;구매사이트 : www.seoulvinyl.com&#10;https://smartstore.naver.com/seoulvinyl&#10;&#10;해당 타이틀은 예약판매로 진행됩니다. 감사합니다^_____________^&#10;&#10;* 다른 상품과 함께 주문 시 가장 늦게 발매되는 앨범 기준으로 합배송됩니다. 별도 배송 요청은 전화(02-792-3110) 또는 인스타그램 DM(@seoulvinyl)으로 문의 주세요. 🙏🏻"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG07.jpg" alt="백예린 LP 예약판매"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG08.jpg"
+                data-likes="좋아요 20개"
+                data-time="3월 11일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DVvXZJyAVO9/"
+                data-caption="✨ 배송 완료 ✨&#10;&#10;문혜원 Moon Hae Won with Tsuyoshi Yamamoto - Love Songs from Moon 10inch Vinyl&#10;&#10;모두 발송되었습니다.&#10;현재 온·오프라인에서 모두 구매 가능합니다.&#10;&#10;서울바이닐에서 구매해주셔서 감사합니다 🙇🏻‍♂"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG08.jpg" alt="문혜원 LP 배송완료"></li>
+
+            <li
+                data-img="img/about/seoulvinylIG09.jpg"
+                data-likes="좋아요 16개"
+                data-time="3월 11일"
+                data-url="https://www.instagram.com/seoulvinyl/p/DVvXTdOgaRn/"
+                data-caption="✨ 배송 완료 ✨&#10;&#10;문혜원 Moon Hae Won with Tsuyoshi Yamamoto - Love Songs from Moon 10inch Vinyl&#10;&#10;모두 발송되었습니다.&#10;현재 온·오프라인에서 모두 구매 가능합니다.&#10;&#10;서울바이닐에서 구매해주셔서 감사합니다 🙇🏻‍♂"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG09.jpg" alt="문혜원 LP 배송완료"></li>
+
+            <li
+                data-type="video"
+                data-video="img/about/seoulvinylIG10.mp4"
+                data-img="img/about/seoulvinylIG10.jpg"
+                data-likes="좋아요 41개"
+                data-time="3월 11일"
+                data-url="https://www.instagram.com/seoulvinyl/reel/DVvXK8lgS5-/"
+                data-caption="✨ 배송 완료 ✨&#10;&#10;문혜원 Moon Hae Won with Tsuyoshi Yamamoto - Love Songs from Moon 10inch Vinyl&#10;&#10;모두 발송되었습니다.&#10;현재 온·오프라인에서 모두 구매 가능합니다.&#10;&#10;서울바이닐에서 구매해주셔서 감사합니다 🙇🏻‍♂"
+                data-hashtags=""
+            ><img src="img/about/seoulvinylIG10.jpg" alt="문혜원 LP 배송완료"></li>
+        </ul>
+
+    </section>
+
+    <section id="vinylGuide" class="fade-up">
+        <h2 class="title">Vinyl Guide : Storage & Playback Tips</h2><span></span>
+        <div class="title-underline"><img src="img/about/title-under.png" alt=""></div>
+
+        <ul class="Guidelist">
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">보관</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>반드시 세로로 세워서 보관</li>
+                        <li><small>02.</small>가로로 쌓으면 판이 휨 (워핑)</li>
+                        <li><small>03.</small>직사광선 · 고온 · 습기 피하기</li>
+                        <li><small>04.</small>서늘하고 어두운 곳 권장</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide01.png" alt="">
+            </li>
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">슬리브</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>속 슬리브: 비닐 소재 권장</li>
+                        <li><small>02.</small>종이는 스크래치 위험</li>
+                        <li><small>03.</small>겉 슬리브: 비닐 커버로 먼지 차단</li>
+                        <li><small>04.</small>한 슬리브에 두 장 이상 금지</li>
+                        <li><small>05.</small>재생 후 바로 슬리브에 넣기</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide02.png" alt="">
+            </li>
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">핸들링</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>판 면 절대 손으로 만지지 않기</li>
+                        <li><small>02.</small>항상 가장자리를 손끝으로 잡기</li>
+                        <li><small>03.</small>지문 · 유분 = 음질 저하 · 먼지 유인</li>
+                        <li><small>04.</small>재생 전후 항정전기 브러시로 닦기</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide03.png" alt="">
+            </li>
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">재생 팁</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>재생 전 판 상태 · 먼지 확인</li>
+                        <li><small>02.</small>턴테이블 수평 맞추기 (지직 소리 원인)</li>
+                        <li><small>03.</small>바늘(스타일러스)은 500~1000시간마다 교체</li>
+                        <li><small>04.</small>재생 중 판 위에 손 올리지 않기</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide04.png" alt="">
+            </li>
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">세척</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>항정전기 브러시: 매 재생 전후</li>
+                        <li><small>02.</small>오염 심할 땐 전용 세척액 사용</li>
+                        <li><small>03.</small>원형(소리골 방향)으로 닦기</li>
+                        <li><small>04.</small>티슈 · 일반 천 사용 금지 (스크래치)</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide05.png" alt="">
+            </li>
+            <li>
+                <div class="GuideText">
+                    <span class="Top-title">Vinyl Guide</span>
+                    <span class="Guide-title">주의점</span>
+                    <ul class="Guide-content">
+                        <li><small>01.</small>여러 장 가로로 쌓아두기 → 워핑</li>
+                        <li><small>02.</small>손으로 판 면 잡기 → 음질 저하</li>
+                        <li><small>03.</small>창가 · 햇볕 드는 곳 보관 → 변형</li>
+                        <li><small>04.</small>닳은 바늘 계속 사용 → 판 손상</li>
+                    </ul>
+                </div>
+                <div class="GuideBG"></div>
+                <img src="img/about/VinylGuide06.png" alt="">
+            </li>
+        </ul>
+    </section>
+
+    <section id="FAQ" class="fade-up">
+        <div class="FAQ-title">
+            <h2 class="title">FAQ</h2><span></span>
+            <div class="title-underline"><img src="img/about/title-under.png" alt=""></div>
+        </div>
+        <div class="FAQ-content">
+            <ul>
+                <li>
+                    <p class="FAQ_Q">Q. LP를 처음 접하는데 방문해도 괜찮나요? <img src="img/about/open.png" alt=""></p>
+                    <p class="FAQ_A">A. 물론입니다. 고르는 법부터 재생 팁까지 안내해드립니다.</p>
+                </li>
+                <li>
+                    <p class="FAQ_Q">Q. 중고 LP도 판매하나요? <img src="img/about/open.png" alt=""></p>
+                    <p class="FAQ_A">A. 네, 중고 LP도 취급합니다. 재킷·내지·판 상태 세 가지를 직접 확인한 것만 판매합니다.</p>
+                </li>
+                <li>
+                    <p class="FAQ_Q">Q. LP를 가져가서 팔 수 있나요? <img src="img/about/open.png" alt=""></p>
+                    <p class="FAQ_A">A. 매입도 진행합니다. 방문 전 DM이나 전화로 먼저 문의해주세요.</p>
+                </li>
+                <li>
+                    <p class="FAQ_Q">Q. 주차가 가능한가요?<img src="img/about/open.png" alt=""></p>
+                    <p class="FAQ_A">A. 별도 주차 공간이 없습니다. 대중교통 이용을 권장합니다.</p>
+                </li>
+                <li>
+                    <p class="FAQ_Q">Q. 단체 방문이나 대관도 가능한가요?<img src="img/about/open.png" alt=""></p>
+                    <p class="FAQ_A">A. 사전 문의 주시면 안내해드립니다. 이메일 또는 DM으로 연락해주세요.</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ======================================================
+                Footer  -> common.css 연결 
+    =========================================================-->
+
+    <footer>
+        <div class="footer-top-section">
+            <div class="footer-top-container">
+                <ul class="footer-top__left">
+                    <li><a href="#"><strong>문의</strong></a></li>
+                    <li><a href="#"><strong>이용약관</strong></a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#"><strong>사업자정보확인</strong></a></li>
+                </ul>
+                
+                <ul class="footer-top__right">
+                    <li><a href="#"><img src="img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-section">
+                <ul class="footer-bottom__txt">
+                    <li>상호 : 주식회사 서울바이닐(SEOUL VINYL Co.,Ltd)</li>
+                    <li>대표 : 이진욱</li>
+                    <li>개인정보관리책임자 : 이진욱</li>
+                    <li>전화 : 02-792-3110</li>
+                    <li>이메일 : whatsupjin@hanmail.net</li>
+                    <li>주소 : 서울특별시 용산구 신흥로 30, 1층/2층</li>
+                    <li>사업자등록번호 : 713-81-02189</li>
+                    <li>통신판매 : 제 2020-서울용산-2144호</li>
+                </ul>
+
+
+            <div class="footer-bottom__escrow">
+                <img src="img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
+                <span>안전구매(에스크로) 서비스 가맹점</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- 인스타 팝업 -->
+    <div class="ig-modal-overlay" id="igOverlay">
+        <button class="ig-close-btn" id="igClose" aria-label="닫기">&times;</button>
+        <button class="ig-nav-btn ig-nav-prev" id="igPrev" aria-label="이전"><img src="img/about/info-prev.png" alt="이전"></button>
+        <div class="ig-modal" id="igModal">
+            <div class="ig-img-pane">
+                <img id="igPopupImg" src="" alt="">
+            </div>
+            <div class="ig-side">
+                <div class="ig-body" id="igBody"></div>
+                <div class="ig-footer">
+                    <span class="ig-likes" id="igLikes"></span>
+                    <a class="ig-link-btn" id="igLink" href="#" target="_blank" rel="noopener">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                        Instagram에서 보기
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="ig-nav-btn ig-nav-next" id="igNext" aria-label="다음"><img src="img/about/info-next.png" alt="다음"></button>
+    </div>
+
+    <script src="js/about.js"></script>
 </body>
 </html>
