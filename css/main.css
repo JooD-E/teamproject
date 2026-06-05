@@ -236,7 +236,7 @@
 .playlist__item-info span {font-size:16px;margin-top:5px;}
 
 
-.playlist-album {margin-top:40px;width:400px; grid-area:album;}
+.playlist-album {width:400px; grid-area:album;height:312px;}
 .playlist-album img {width:100%;}
 
 

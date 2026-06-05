@@ -106,7 +106,14 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .site-header.menu-open .btn-search {pointer-events: auto;}
 
 
-.site-header.fixed{background:#20202090;border-bottom: 1px solid #444444;backdrop-filter:blur(5px);-webkit-backdrop-filter: blur(2px);}
+.site-header.fixed{/*background:#20202090;border-bottom: 1px solid #444444;*/
+    backdrop-filter:blur(5px);-webkit-backdrop-filter: blur(5px);
+    background: linear-gradient(
+        to bottom, 
+        rgba(12, 12, 12, 0.95) 0%,   /* 맨 위*/
+        rgba(22, 22, 22, 0.6) 60%,   /* 중간*/
+        rgba(32, 32, 32, 0) 100%     /* 맨 아래*/
+    );}
 .site-header.hide {transform: translateY(-100%);}
 
 .logo a img{width:60px;}
