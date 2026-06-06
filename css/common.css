@@ -85,6 +85,7 @@
    2. 전체 배경 및 기본 바디 세팅
    ========================================================================== */
 
+html {scrollbar-gutter:stable;}
 body {background:#202020; font-family:'EBGaramond', 'Pretendard';color: #EBE8E8;}
 *, *:before, *:after {box-sizing: border-box;}
 a {text-decoration: none;color: inherit;}
@@ -207,3 +208,35 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .footer-bottom__escrow {align-items: center;display:flex;}
 .footer-bottom__escrow img{width:13px;margin-right:10px;}
 .footer-bottom__escrow span{font-size:12px;line-height:12px;}
+
+
+/* =========================
+            SEARCH
+===========================*/
+
+.full-page-search {position: fixed;top: 0;left: 0;width: 100vw;height: 100vh;display: flex;
+    background-color: rgba(25, 25, 25, 0.98);z-index: 200;justify-content: center;align-items: center;     
+    transform: translateY(-100%);transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);}
+
+
+.full-page-search.s-active {transform: translateY(0);}
+
+.btn-close-search {position: absolute;top: 40px;right: 5%;width: 35px;height: 35px;background: none;
+    border: none;cursor: pointer;}
+.btn-close-search .bar-search {position: absolute;top: 50%;left: 0;width: 100%;height: 2px;
+    background-color: #fff;transition: transform 0.3s ease;}
+
+.btn-close-search .bar-search:nth-child(1) { transform: translateY(-50%) rotate(45deg); }
+.btn-close-search .bar-search:nth-child(2) { transform: translateY(-50%) rotate(-45deg); }
+.btn-close-search:hover .bar-search { background-color: #EB681B;}
+
+.search-container {display: flex;align-items: center;width: 60%;max-width: 800px;border-bottom: 1px solid #fff; /* 시안의 얇은 밑줄! */
+    padding-bottom: 15px;transition: border-color 0.3s ease;}
+
+.search-container:focus-within {border-bottom-color: #EB681B;}
+.search-icon-inner {width: 35px;margin-right: 20px;}
+
+.search-input {flex: 1;background: none;border: none;outline: none;color: #fff;font-size: 32px;
+    font-family: 'Pretendard', sans-serif;font-weight: 400;}
+
+.search-input::placeholder {color: #555;font-weight: 200;}

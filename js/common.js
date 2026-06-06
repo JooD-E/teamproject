@@ -43,4 +43,28 @@ $(function() {
         }
     });
 
+    /* =========================
+            full-page-search
+    ===========================*/
+    const btnSearch = document.querySelector('.btn-search');
+    const fullPageSearch = document.querySelector('.full-page-search');
+    const btnCloseSearch = document.querySelector('.btn-close-search');
+    const searchInput = document.querySelector('.search-input');
+
+    btnSearch.addEventListener('click', () => {
+        fullPageSearch.classList.add('s-active');
+        body.style.overflow = 'hidden'; //
+        
+        setTimeout(() => {
+            searchInput.focus();
+        }, 100); 
+    });
+
+    btnCloseSearch.addEventListener('click', () => {
+        fullPageSearch.classList.remove('s-active');
+        body.style.overflow = '';
+        searchInput.value = '';
+    });
+
+
 });
