@@ -67,4 +67,29 @@ $(function() {
     });
 
 
+
+    /* ==============================================
+            full-page-search - 로그인 / 로그아웃
+    ================================================*/
+
+        
+    fetch('php/check_session.php', { cache: 'no-store' })
+            .then(response => response.text())
+            .then(data => {
+                
+                const loginBtn = document.querySelector('.menu-log-in');
+                const logoutBtn = document.querySelector('.menu-log-out');
+
+                if(data.trim() === "true") {
+                    loginBtn.style.display = 'none';  
+                    logoutBtn.style.display = 'flex';
+                } 
+                else {
+                    loginBtn.style.display = 'flex';
+                    logoutBtn.style.display = 'none'; 
+                }
+            })
+            .catch(error => console.error('에러 발생:', error));
+
+
 });
