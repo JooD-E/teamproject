@@ -5,7 +5,7 @@
         echo "
             <script>
                 alert('이미 로그인 되어있습니다.');
-                location.href = '../main.html'; // 메인 페이지 경로
+                location.href = '../main.html';
             </script>
         ";
         exit;
@@ -33,7 +33,8 @@
                 document.find_id_form.hp.focus();
                 return;
             }
-            alert("입력하신 번호(" + hp + ")로 인증번호가 발송되었습니다.\n(팀 프로젝트용 시뮬레이션이므로 즉시 인증 완료 처리됩니다.)");
+            alert("입력하신 번호(" + hp + ")로 인증번호가 발송되었습니다.\n
+            (팀 프로젝트용 시뮬레이션이므로 즉시 인증 완료 처리됩니다.)");
         }
 
         function check_find_id() {
@@ -56,7 +57,7 @@
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
-                <a href="/main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+                <a href="../main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
             </h1>
             <nav class="util-nav">
                 <ul>
@@ -68,7 +69,7 @@
                     <li>
                         <a href="#"><img src="../img/common/Group.png" alt="레코드 이미지"></a>
                     </li>
-                    <li><a href="#"><img src="../img/common/user.png" alt="내 정보"></a></li>
+                    <li><a href="./mypage.php"><img src="../img/common/user.png" alt="내 정보"></a></li>
                     <li>
                         <button type="button" class="btn-hamburger" aria-label="메뉴 열기/닫기">
                             <span class="bar"></span>
@@ -131,11 +132,11 @@
                 </div>
             </div>
             <div class="menu-log">
-                <a class="menu-log-in" href="#">
+                <a class="menu-log-in" href="./seoulvinyl_login.php">
                     <img src="../img/common/login.png" alt="로그인 하기">
                     <p>Login</p>
                 </a>
-                <a class="menu-log-out" href="#">
+                <a class="menu-log-out" href="./logout.php">
                     <img src="../img/common/logout.png" alt="로그아웃 하기">
                     <p>Logout</p>
                 </a>
