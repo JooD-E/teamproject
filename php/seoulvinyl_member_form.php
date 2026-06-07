@@ -85,7 +85,7 @@
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
-                <a href="/main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+                <a href="../main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
             </h1>
             <nav class="util-nav">
                 <ul>
@@ -97,7 +97,7 @@
                     <li>
                         <a href="#"><img src="../img/common/Group.png" alt="레코드 이미지"></a>
                     </li>
-                    <li><a href="#"><img src="../img/common/user.png" alt="내 정보"></a></li>
+                    <li><a href="./mypage.php"><img src="../img/common/user.png" alt="내 정보"></a></li>
                     <li>
                         <button type="button" class="btn-hamburger" aria-label="메뉴 열기/닫기">
                             <span class="bar"></span>
@@ -160,11 +160,11 @@
                 </div>
             </div>
             <div class="menu-log">
-                <a class="menu-log-in" href="#">
+                <a class="menu-log-in" href="./seoulvinyl_login.php">
                     <img src="../img/common/login.png" alt="로그인 하기">
                     <p>Login</p>
                 </a>
-                <a class="menu-log-out" href="#">
+                <a class="menu-log-out" href="./logout.php">
                     <img src="../img/common/logout.png" alt="로그아웃 하기">
                     <p>Logout</p>
                 </a>
