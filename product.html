@@ -6,9 +6,429 @@
     <title>Seoul Vinyl</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/common.css">
-    
+    <link rel="stylesheet" href="css/product.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/product.js" defer></script>
+
 </head>
 <body>
+<!-- ======================================================
+                Header  -> common.css  common.js 연결 /
+    =========================================================-->
+
+    <header class="site-header">
+        <div class="site-header-inner">
+            <h1 class="logo">
+                <a href="/main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+            </h1>
+
+            <nav class="util-nav">
+                <ul>
+                    <li><a href="#"><span>Login</span></a></li>
+                    <li>
+                        <a href="#">
+                            <img src="img/common/Group.png" alt="레코드 이미지">
+                        </a>
+                    </li>
+                    <li><a href="#"><img src="img/common/user.png" alt="내 정보"></a></li>
+                    <li><button type="button"><img src="img/common/hamburger.png" alt="햄버거 메뉴"></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
     
+    <!-- ======================================================
+                Hero Section
+    =========================================================-->
+    <main>
+        <section class="hero">
+            <div class="hero-slider">
+
+                <!-- 슬라이드 1 -->
+                <div class="slide active">
+                    <div class="banner">
+                        <img src="img/product/top-banner.png" alt="배너 이미지">
+                    </div>                   
+                    <div class="banner-text">
+                        <h2>NOFX</h2>
+                        <p class="brand">40 Years of Fuckin'Up</p>
+                        <p>전설적인 펑크 록 밴드 NOFX가 걸어온 날 것 그대로의 40년.<br>
+                        그들의 가장 엉망진창이었던 순간들과 위대한 음악들이 마침내 하나의 앨범에 담겼습니다.</p>
+                        <a href="#" class="btn">BUY NOW</a>
+                    </div>
+                </div>
+
+                <!-- 슬라이드 2 -->
+                <div class="slide">
+                    <div class="banner">
+                        <img src="img/product/oasis_banner3.png" alt="배너 이미지">
+                    </div>                   
+                    <div class="banner-text">
+                        <h2>Oasis</h2>
+                        <p class="brand">Dig Out Your Soul</p>
+                        <p>사이키델릭한 사운드와 거친 록 에너지가 뒤섞인 이 앨범은,<br>
+                        익숙한 오아시스의 모습과 새로운 도전이 공존하는 순간을 담고 있습니다.<br><br>
+                        몽환적인 멜로디와 자유로운 상상력이 만들어낸,<br>
+                        오아시스 역사상 가장 대담한 기록을 만나보세요.
+                        </p>
+                        <a href="#" class="btn">BUY NOW</a>
+                    </div>
+                </div>
+
+                <!-- 슬라이드 3 -->
+                <div class="slide">
+                    <div class="banner">
+                        <img src="img/product/banner2-hyukoh.png" alt="배너 이미지">
+                    </div>                   
+                    <div class="banner-text">
+                        <h2>Hyukoh</h2>
+                        <p class="brand">흐릿한 기억과 선명한 감정 사이</p>
+                        <p>정답 없는 청춘의 순간들,<br>
+                            그리고 설명할 수 없는 감정들.<br><br>
+                            이 앨범은 그 모든 순간을<br>
+                        한 폭의 그림처럼 담아냅니다.</p>
+                        <a href="#" class="btn">BUY NOW</a>
+                    </div>
+                </div>
+
+                <!-- 컨트롤 (슬라이더 밖으로 분리) -->
+                <button class="prev-btn"><img src="img/product/prev-btn.png" alt="전 버튼"></button>
+                <button class="next-btn"><img src="img/product/next-btn.png" alt="다음 버튼"></button>
+                
+
+                <div class="slide-dot">
+                        <button class="dot active"><img src="img/product/btn-active.png" alt="활동 버튼"></button>
+                        <button class="dot"><img src="img/product/btn-default.png" alt="비활동 버튼"></button>
+                        <button class="dot"><img src="img/product/btn-default.png" alt="비활동 버튼"></button>
+                </div>                   
+            </div>
+        </section>
+   
+        <!-- ======================================================
+                                Trending
+        =========================================================-->
+    
+        <section class="trend">
+            <h2 class="trend-title">Trending Now</h2>
+            <div class="trend-list">
+                <article class="trend-card">
+                    <img src="img/product/p-img01.png" alt="앨범 이미지">
+                    <h3>Inferno</h3>
+                    <p>by Boards of Canada</p>
+                    <h4>｜ alternative</h4>
+                </article>
+
+                <article class="trend-card">
+                    <img src="img/product/p-img02.png" alt="앨범 이미지">
+                    <h3>Deep Blue : Volume 4</h3>
+                    <p>by Luigi Tozzi</p>
+                    <h4>｜ electric</h4>
+                </article>
+
+                <article class="trend-card">
+                    <img src="img/product/p-img03.png" alt="앨범 이미지">
+                    <h3>Kinesis</h3>
+                    <p>by ANNĒ</p>
+                    <h4>｜ electric</h4>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+                                 Discover Section
+        =========================================================-->
+
+        <section class="discover">
+            <div class="discover-title">
+                <h2>Discover Your Next Favorite Record</h2>
+                <span></span>
+                <img src="img/product/texture-img.png" alt="제목 데코 이미지">
+            </div>
+            <div class="discover-layout">
+                 <!-- 왼쪽 필터 -->
+                <nav class="filter">
+                    <div class="filter-group">
+                        <h3>GENRE</h3>
+                        <ul>
+                            <li><button type="button" data-filter="pop">Pop / Rock</button></li>
+                            <li><button type="button" data-filter="soul">R&amp;B / Soul</button></li>
+                            <li><button type="button" data-filter="hip">Hip-Hop / Electronic</button></li>
+                            <li><button type="button" data-filter="jazz">Jazz / Blues</button></li>
+                            <li><button type="button" data-filter="city">City Pop</button></li>
+                            <li><button type="button" data-filter="ost">OST / Classical</button></li>
+                            <li><button type="button" data-filter="only">Only SeoulVinyl</button></li>   
+                        </ul>
+                        <span></span>
+                    </div>
+
+                     <div class="filter-group">
+                        <h3>ERA</h3>
+                        <ul>
+                            <li><button type="button" data-filter="2020">2020s -</button></li>
+                            <li><button type="button" data-filter="2000">2000s - 2010</button></li>
+                            <li><button type="button" data-filter="1980">1980s - 1990s</button></li>
+                            <li><button type="button" data-filter="1960">1960s - 1970s</button></li>                         
+                        </ul>
+                        <span></span>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>FORMAT</h3>
+                        <ul>
+                            <li><button type="button" data-filter="vinyl">Vinyl</button></li>
+                            <li><button type="button" data-filter="album">Album</button></li>
+                            <li><button type="button" data-filter="lp">LP</button></li>
+                            <li><button type="button" data-filter="12">12″</button></li>                         
+                        </ul>
+                        <span></span>
+                    </div>
+
+                    <div class="filter-group">
+                        <h3>COUNTRY</h3>
+                        <ul>
+                            <li><button type="button" data-filter="us">US</button></li>
+                            <li><button type="button" data-filter="uk">UK</button></li>
+                            <li><button type="button" data-filter="kor">KOR</button></li>
+                            <li><button type="button" data-filter="global">Global</button></li>
+                            <li><button type="button" data-filter="jpn">JPN</button></li>                          
+                        </ul>
+                    </div>             
+                </nav>
+
+                 <!-- 오른쪽 필터 -->
+                <div class="album-area">
+                    <div class="album-top">
+                        <button type="button" id="allItemsBtn" class="active">ALL ITEMS</button>
+
+                        <div class="album-option">
+                            <button type="button" class="sold-toggle" id="soldToggle">
+                                <span>품절된 상품 제외하기</span>
+                                <span class="toggle"></span>
+                            </button>
+                            <select class="sort" id="sortSelect">
+                                    <option value="all">ALL</option>
+                                    <option value="newest">최신순</option>
+                                    <option value="popular">인기순</option>
+                                    <option value="price-asc">낮은 가격순</option>
+                                    <option value="price-desc">높은 가격순</option>
+                            </select>                          
+                        </div>
+                    </div>
+                    <span class="line"></span>  
+                  
+                
+
+                    <div class="album-grid" id="albumGrid">
+
+                        <article class="album-card" data-category="pop 2000 vinyl uk" data-year="2002" data-popular="88" data-price="32000">
+                            <img src="img/product/p-item01.png" alt="앨범 이미지">
+                            <h3>A song for Every Moon vinyl</h3>
+                            <p>Bruno Major</p>
+                        </article>
+
+                        <article class="album-card" data-category="soul 1980 vinyl uk" data-year="1985" data-popular="95" data-price="45000">
+                            <img src="img/product/p-item02.png" alt="앨범 이미지">
+                            <h3>Bully</h3>
+                            <p>Kanye West</p>
+                        </article>
+
+                        <article class="album-card" data-category="hip 2020 album us" data-year="2022" data-popular="76" data-price="28000">
+                            <img src="img/product/p-item03.png" alt="앨범 이미지">
+                            <h3>Damn Right I Am Somebody</h3>
+                            <p>Fred Wesley & The JB's</p>
+                        </article>
+
+                                <article class="album-card" data-category="jazz 1980 lp global" data-year="1982" data-popular="70" data-price="38000">
+                            <img src="img/product/p-item04.png" alt="앨범 이미지">
+                            <h3>The Crux</h3>
+                            <p>Djo</p>
+                        </article>
+
+                       <article class="album-card" data-category="city 1960 12 uk" data-year="1968" data-popular="82" data-price="52000">
+                            <img src="img/product/p-item05.png" alt="앨범 이미지">
+                            <h3>Faith</h3>
+                            <p>George Michael</p>
+                        </article>
+
+                        <article class="album-card" data-category="ost 1980 12 global" data-year="1987" data-popular="65" data-price="29000" data-sold="true">
+                            <img src="img/product/p-item06.png" alt="앨범 이미지">
+                            <h3>Handstone Psycho</h3>
+                            <p>Don Toliver</p>
+                        </article>
+
+                        <article class="album-card" data-category="only 2000 album us" data-year="2005" data-popular="59" data-price="41000">
+                            <img src="img/product/p-item07.png" alt="앨범 이미지">
+                            <h3>Keep On Bumpin'& Masterplan</h3>
+                            <p>Kaygee's</p>
+                        </article>
+
+                          <article class="album-card" data-category="jazz 1960 lp global" data-year="1965" data-popular="91" data-price="60000">
+                            <img src="img/product/p-item08.png" alt="앨범 이미지">
+                            <h3>Rush In Peace</h3>
+                            <p>Megadeth</p>
+                        </article>
+
+                        <article class="album-card" data-category="pop 2020 album kor" data-year="2024" data-popular="99" data-price="35000">
+                            <img src="img/product/p-item09.png" alt="앨범 이미지">
+                            <h3>Rosie</h3>
+                            <p>Rose</p>
+                        </article>
+
+
+                        <article class="album-card" data-category="ost 2000 vinyl jpn" data-year="2006" data-popular="78" data-price="55000" data-sold="true">
+                            <img src="img/product/p-item10.png" alt="앨범 이미지">
+                            <h3>1996 30th Anniversary Edition</h3>
+                            <p>Ryuichi Sakamoto</p>
+                        </article>
+
+                        <article class="album-card" data-category="pop 2020 12 lp kor" data-year="2025" data-popular="93" data-price="33000">
+                            <img src="img/product/p-item11.png" alt="앨범 이미지">
+                            <h3>SPAGHETTI</h3>
+                            <p>LE SSERAFIM</p>
+                        </article>
+
+                        <article class="album-card" data-category="hip 2000 album global" data-year="2008" data-popular="55" data-price="22000">
+                            <img src="img/product/p-item12.png" alt="앨범 이미지">
+                            <h3>YAHO</h3>
+                            <p>EK</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- ======================================================
+                         Soundtrack Section
+        =========================================================-->
+
+
+        <section class="soundtrack">
+             <!-- 슬라이드 1 -->
+            <div class="b-slide active">
+                <div class="b-banner">
+                    <img src="img/product/p-subban01.png" alt="하단 배너 이미지">
+                </div>
+                <div class="banner-text">
+                    <span></span>
+                     <h2>SOUNDTRACKS<br>
+                    FOR A RAINY EMPTINESS</h2>
+                    <p>비 오는 날 듣기 좋은 숨겨진 명반을 소개합니다</p>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- 슬라이드 2 -->
+            <div class="b-slide">
+                <div class="b-banner">
+                    <img src="img/product/p-subban02.png" alt="하단 배너 이미지">
+                </div>
+                <div class="banner-text">
+                    <span></span>
+                     <h2>MUSICS<br>
+                    FOR SUMMER BREEZE</h2>
+                    <p>여름에 듣기 좋은 숨겨진 명반을 소개합니다</p>
+                    <span></span>
+                </div>
+            </div>
+
+             <!-- 슬라이드 3 -->
+            <div class="b-slide">
+                <div class="b-banner">
+                    <img src="img/product/p-subban03.png" alt="하단 배너 이미지">
+                </div>
+                <div class="banner-text">
+                    <span></span>
+                     <h2> LATE NIGHT<br>
+                     SOUNDTRACKS</h2>
+                    <p>새벽에 듣기 좋은 숨겨진 명반을 소개합니다</p>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- 슬라이드 4 -->
+            <div class="b-slide">
+                <div class="b-banner">
+                    <img src="img/product/p-subban04.png" alt="하단 배너 이미지">
+                </div>
+                <div class="banner-text">
+                    <span></span>
+                     <h2>GOOD MORNING</h2>
+                    <p>이른 아침에 좋은 숨겨진 명반을 추천합니다</p>
+                    <span></span>
+                </div>
+            </div>
+
+            <!-- 슬라이드 5 -->
+            <div class="b-slide">
+                <div class="b-banner">
+                    <img src="img/product/p-subban05.png" alt="하단 배너 이미지">
+                </div>
+                <div class="banner-text">
+                    <span></span>
+                     <h2>SOUNDTRACKS<br>
+                    FOR LAZY SUNDAY AFTERTNOON.</h2>
+                    <p>일요일 오후 청소하면서 듣기 좋은 숨겨진 명반을 소개합니다.</p>
+                    <span></span>
+                </div>
+            </div>
+            <button class="b-prev"> <img src="img/product/prev-btn.png" alt="이전 버튼"> </button>
+            <button class="b-next"> <img src="img/product/next-btn.png" alt="다음 버튼"> </button>
+            <div class="b-page-num">
+                <button class="active">1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>5</button>
+             </div>
+        </section>
+    </main> 
+    
+    <!-- ======================================================
+                Footer  -> common.css 연결 
+    =========================================================-->
+
+    <footer>
+        <div class="footer-top-section">
+            <div class="footer-top-container">
+                <ul class="footer-top__left">
+                    <li><a href="#"><strong>문의</strong></a></li>
+                    <li><a href="#"><strong>이용약관</strong></a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#"><strong>사업자정보확인</strong></a></li>
+                </ul>
+                
+                <ul class="footer-top__right">
+                    <li><a href="#"><img src="img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-section">
+                <ul class="footer-bottom__txt">
+                    <li>상호 : 주식회사 서울바이닐(SEOUL VINYL Co.,Ltd)</li>
+                    <li>대표 : 이진욱</li>
+                    <li>개인정보관리책임자 : 이진욱</li>
+                    <li>전화 : 02-792-3110</li>
+                    <li>이메일 : whatsupjin@hanmail.net</li>
+                    <li>주소 : 서울특별시 용산구 신흥로 30, 1층/2층</li>
+                    <li>사업자등록번호 : 713-81-02189</li>
+                    <li>통신판매 : 제 2020-서울용산-2144호</li>
+                </ul>
+
+
+            <div class="footer-bottom__escrow">
+                <img src="img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
+                <span>안전구매(에스크로) 서비스 가맹점</span>
+            </div>
+
+        </div>
+    </footer>  
 </body>
 </html>
