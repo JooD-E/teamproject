@@ -71,14 +71,14 @@
 ========================= */
 
 .wishlist-section {max-width: 1440px;width: 80%;margin-left:5%;background-color: #202020;
-    border: 1px solid #fff;border-radius: 12px;padding: 30px 40px;}
+                border: 1px solid #fff;border-radius: 12px;padding: 30px 40px;}
 
 .wishlist-title {font-size: 1.1rem;font-weight: bold;margin-bottom: 20px;}
 
 .wishlist-grid {display: grid;grid-template-columns: 1fr 1fr;}
 
 .wishlist-item {display: grid;grid-template-columns: 80px 1.5fr 1fr 24px;grid-template-rows: 1fr 1fr;
-    gap: 10px 20px;padding: 30px;font-family:"Pretendard";}
+                gap: 10px 20px;padding: 30px;font-family:"Pretendard";}
 
 .wishlist-item:nth-child(1) {border-bottom: 1px solid #ffffff30;border-right: 1px solid #ffffff30;}
 .wishlist-item:nth-child(2) {border-bottom: 1px solid #ffffff30;}
