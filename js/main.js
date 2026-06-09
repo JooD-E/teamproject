@@ -3,38 +3,166 @@ document.addEventListener("DOMContentLoaded", function (){
     /* =========================
           DJ's PICK Swiper
     ===========================*/
-    const albumSwiper = new Swiper('.album-swiper', {
-        effect: 'coverflow',
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: 'auto',
-        loop: true,
-        slideToClickedSlide: true,
-        coverflowEffect:{
-            rotate:0,
-            stretch: 50,
-            depth:200,
-            modifier:1,
-            slideShadows:false,
+    const cards = document.querySelectorAll('.album-card');
+    const texts = document.querySelectorAll('.text-item');
+    let currentIndex = 0;
+    const totalSlides = cards.length;
+
+    function updateGallery() {
+        cards.forEach((card, index) => {
+            let diff = (index - currentIndex + totalSlides) % totalSlides;
+            
+            if (diff > totalSlides / 2) diff -= totalSlides;
+
+            let translateX = 0;
+            let scale = 1;
+            let zIndex = 0;
+            let opacity = 1;
+
+            if (diff === 0) {
+                translateX = 0;
+                scale = 1;
+                zIndex = 3;
+                opacity = 1;
+            } else if (diff === 1 || diff === -1) {
+                translateX = diff * 320; 
+                scale = 0.8;
+                zIndex = 2;
+                opacity = 1;
+            } else if (diff === 2 || diff === -2) {
+                translateX = Math.sign(diff) * 560; 
+                scale = 0.6;
+                zIndex = 1;
+                opacity = 1; 
+            } else {
+                translateX = Math.sign(diff) * 700;
+                scale = 0.4;
+                zIndex = 0;
+                opacity = 0;
+            }
+
+            card.style.transform = `translateX(${translateX}px) scale(${scale})`;
+            card.style.zIndex = zIndex;
+            card.style.opacity = opacity;
+        });
+
+        texts.forEach((text, index) => {
+            let diff = (index - currentIndex + totalSlides) % totalSlides;
+            if (diff > totalSlides / 2) diff -= totalSlides;
+
+            let translateY = 0;
+            let scale = 1;
+            let opacity = 1;
+            let color = '#555';
+            let fontWeight = 'normal';
+
+            if (diff === 0) {
+                translateY = 0;
+                scale = 1.6;
+                opacity = 1;
+                color = '#fff';
+                fontWeight = 'bold';
+            } else if (diff === 1 || diff === -1) {
+                translateY = diff * 45;
+                scale = 1.1;
+                opacity = 0.5;
+            } else {
+                translateY = Math.sign(diff) * 100;
+                scale = 1;
+                opacity = 0;
+            }
+
+            text.style.transform = `translateY(calc(-50% + ${translateY}px)) scale(${scale})`;
+            text.style.opacity = opacity;
+            text.style.color = color;
+            text.style.fontWeight = fontWeight;
+        });
+    }
+
+    let startX = 0;
+    let isDragging = false;
+    let dragMoveDetected = false;
+
+    cards.forEach((card) => {
+        card.addEventListener('mousedown', (e) => {
+            startX = e.pageX;
+            isDragging = true;
+            dragMoveDetected = false;
+        });
+
+        card.addEventListener('touchstart', (e) => {
+            startX = e.touches[0].clientX;
+            isDragging = true;
+            dragMoveDetected = false;
+        });
+    });
+
+    window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        if (Math.abs(e.pageX - startX) > 5) {
+            dragMoveDetected = true;
         }
     });
 
-    const textSwiper = new Swiper('.text-swiper', {
-        direction: 'vertical',
-        centeredSlides:true,
-        slidesPerView:3,
-        loop: true,
-        allowTouchMove: false,
-    });
-
-    albumSwiper.on('slideChangeTransitionEnd', function () {
-        const currentRealIndex = albumSwiper.realIndex;
-        
-        if (textSwiper.realIndex !== currentRealIndex) {
-            textSwiper.slideToLoop(currentRealIndex, 300, false); 
+    window.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        if (Math.abs(e.touches[0].clientX - startX) > 5) {
+            dragMoveDetected = true;
         }
     });
 
+    window.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const diffX = e.pageX - startX;
+        if (dragMoveDetected) {
+            handleSwipe(diffX);
+        } else {
+            const clickedCard = e.target.closest('.album-card');
+            if (clickedCard) {
+                const index = Array.from(cards).indexOf(clickedCard);
+                if (index !== -1) {
+                    currentIndex = index;
+                    updateGallery();
+                }
+            }
+        }
+    });
+
+    window.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+
+        const diffX = e.changedTouches[0].clientX - startX;
+        if (dragMoveDetected) {
+            handleSwipe(diffX);
+        } else {
+            const clickedCard = e.target.closest('.album-card');
+            if (clickedCard) {
+                const index = Array.from(cards).indexOf(clickedCard);
+                if (index !== -1) {
+                    currentIndex = index;
+                    updateGallery();
+                }
+            }
+        }
+    });
+
+    function handleSwipe(diffX) {
+        const threshold = 40;
+
+        if (diffX > threshold) {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            updateGallery();
+        } else if (diffX < -threshold) {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            updateGallery();
+        }
+    }
+
+    updateGallery();
+    
     /* =========================
           New Arrival Swiper
     ===========================*/
