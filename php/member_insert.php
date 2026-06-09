@@ -14,6 +14,7 @@
     $sql_check = "select * from member where id='$id'";
     $result_check = mysqli_query($connect, $sql_check);
     $num_record = mysqli_num_rows($result_check);
+    $regist_day = date("y.m.d");
 
     if ($num_record) {
         echo("
@@ -25,8 +26,8 @@
         exit;
     }
 
-    $sql = "insert into member (id, pass, name, hp, addr, email) ";
-    $sql .= "values('$id', '$pass', '$name', '$hp', '$addr', '$email')";
+    $sql = "INSERT INTO member (id, pass, name, hp, addr, email, regist_day) ";
+    $sql .= "VALUES ('$id', '$pass', '$name', '$hp', '$addr', '$email', '$regist_day')";
 
     $result = mysqli_query($connect, $sql);
 
