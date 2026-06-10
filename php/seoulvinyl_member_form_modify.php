@@ -106,6 +106,7 @@
     </header>
 
     <div class="full-page-menu">
+
         <div class="menu-container">
             <div class="menu-inner">
                 <nav class="menu-util-nav" aria-label="사용자 유틸 메뉴">
@@ -115,45 +116,48 @@
                         <li><a href="#">Order</a></li>
                     </ul>
                 </nav>
+
                 <nav class="main-menu-nav">
                     <ul>
                         <li>
                             <span class="main-menu-num">01</span>
-                            <a href="./product.html" class="depth1">SHOP</a>
+                            <a href="../product.html" class="depth1">SHOP</a>
                             <div class="depth2">
-                                <a href="./product.html">ALL RECOREDS</a>
-                                <a href="./product.html">NEW ARRIVAL</a>
-                                <a href="./product.html">DJ'S PICK</a>
-                                <a href="./product.html">GENRE</a>
+                                <a href="../product.html">ALL RECOREDS</a>
+                                <a href="../product.html">NEW ARRIVAL</a>
+                                <a href="../product.html">DJ'S PICK</a>
+                                <a href="../product.html">GENRE</a>
                             </div>
                         </li>
                         <li>
                             <span class="main-menu-num">02</span>
-                            <a href="./discovery.html" class="depth1">DISCOVER</a>
+                            <a href="../discovery.html" class="depth1">DISCOVER</a>
                             <div class="depth2">
-                                <a href="./discovery.html">SEOUL DRIVE</a>
-                                <a href="./discovery.html">RAINY NIGHT</a>
-                                <a href="./discovery.html">SUNDAY MORNING</a>
-                                <a href="./discovery.html">SUMMER MOOD</a>
-                                <a href="./discovery.html">LATE COFFEE</a>
+                                <a href="../discovery.html">SEOUL DRIVE</a>
+                                <a href="../discovery.html">RAINY NIGHT</a>
+                                <a href="../discovery.html">SUNDAY MORNING</a>
+                                <a href="../discovery.html">SUMMER MOOD</a>
+                                <a href="../discovery.html">LATE COFFEE</a>
                             </div>
                         </li>
                         <li>
                             <span class="main-menu-num">03</span>
-                            <a href="./about.html" class="depth1">ABOUT US</a>
+                            <a href="../about.html" class="depth1">ABOUT US</a>
                             <div class="depth2">
-                                <a href="./about.html">BRAND STORY</a>
-                                <a href="./about.html">STORE INFO</a>
+                                <a href="../about.html">BRAND STORY</a>
+                                <a href="../about.html">STORE INFO</a>
                             </div>
                         </li>
                     </ul>
                 </nav>
+
                 <div class="menu-footer">
                     <h3>Seoul Vinyl</h3>
                     <p>Contact Us</p>
                     <a href="#">Instagram @seoulvinyl</a>
                 </div>
             </div>
+
             <div class="menu-log">
                 <?php
                     if (!$userid) {
