@@ -164,9 +164,9 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .menu-util-nav ul li:hover a {text-decoration: underline;}
 
 .main-menu-nav {position:absolute;top:15%;left:4%;font-family:"Pretendard";}
-.main-menu-nav ul {display:flex;flex-direction:column; gap:60px;}
+.main-menu-nav ul {display:flex;flex-direction:column; gap:50px;}
 .main-menu-num {font-size:14px; font-weight:100;margin-right:20px;}
-.depth1 {font-size:48px; font-weight:bold;display: inline-block;
+.depth1 {font-size:42px; font-weight:bold;display: inline-block;
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);}
 .main-menu-nav ul li:hover .depth1 {color: #EB681B;transform: translateX(15px);/*text-shadow: 2px 2px 10px rgba(235, 104, 27, 0.3);*/}
 .depth2 {font-size:14px;font-weight:100;margin-top:20px;margin-left:30px;}
@@ -175,7 +175,7 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .menu-footer {position:absolute;bottom:5%;left:32%;}
 
 .menu-log {position:absolute;right:5%;bottom:5%;}
-.menu-log .menu-log-out {display:none;}
+/* .menu-log .menu-log-out {display:none;} */
 .menu-log a{font-size:24px;display:flex;flex-direction:column;align-items: center;transition:all 0.5s ease;}
 .menu-log a img {width:65px;}
 .menu-log a:hover {transform:scale(1.1);}
