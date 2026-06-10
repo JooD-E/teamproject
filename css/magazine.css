@@ -1,0 +1,1173 @@
+@charset "utf-8";
+
+/* ======================= 폰트 ========================== */
+/* Noto Serif KR */
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Ballet:opsz@16..72&family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Noto+Serif+KR:wght@200..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* pretendard (300) */
+@font-face {
+    font-family: 'Pretendard';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+}
+/* ========================================================= */
+
+/* ##################### BANNER ########################### */
+.magazine_banner {
+  width: 100%;
+  height: 1000px;
+  position: relative;
+}
+
+/* 이미지 */
+.magazine_banner .banner_image {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.magazine_banner .banner_image img {
+  width: 100%;
+  display: block;
+}
+
+/* 텍스트 */
+.banner_txt {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* 타이틀 */
+.banner_txt h2 {
+  font-size: 100px;
+}
+
+/* 서브 타이틀 */
+.banner_txt p {
+  font-size: 50px;
+  color: #d7d7d7;
+}
+
+/* article */
+.banner_txt article {
+  font-size: 22px;
+  font-family: "Pretendard";
+  font-weight: 300;
+  color: rgb(148, 148, 148);
+  width: 35%;
+  line-height: 1.8;
+}
+
+/* 디바이더 */
+.divider {
+  width: 100px;
+  height: 3px;
+  background: #F0641E;
+}
+
+/* &&&&& 등장 효과 &&&& */
+/* 등장 효과 */
+.magazine_banner {
+  overflow: hidden;
+}
+
+/* 이미지 등장 */
+.magazine_banner .banner_image {
+  opacity: 0;
+  transform: translateX(80px) scale(1.04);
+  animation: bannerImageIn 1.4s ease forwards;
+}
+
+/* 텍스트 공통 등장 */
+.banner_txt h2,
+.banner_txt p,
+.banner_txt .divider,
+.banner_txt article {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: textFadeUp 0.9s ease forwards;
+}
+
+/* 순차 딜레이 */
+.banner_txt h2 {
+  animation-delay: 0.3s;
+}
+
+.banner_txt p {
+  animation-delay: 0.55s;
+}
+
+.banner_txt .divider {
+  animation-delay: 0.8s;
+}
+
+.banner_txt article:nth-of-type(1) {
+  animation-delay: 1.05s;
+}
+
+.banner_txt article:nth-of-type(2) {
+  animation-delay: 1.25s;
+}
+
+/* 이미지 키프레임 */
+@keyframes bannerImageIn {
+  from {
+    opacity: 0;
+    transform: translateX(80px) scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* 텍스트 키프레임 */
+@keyframes textFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ####################### INTERVIEW ######################## */
+
+/* interview 전체 wrapper */
+.interview_wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.interview h2 {
+  font-size: 48px;
+  margin: 80px 0;
+}
+
+/* 전체 박스 flex용 */
+.interview_inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* 왼쪽 chapter tab */
+.interview_inner nav {
+  /* width: 300px; */
+  width: 250px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 90px;
+}
+
+/* 개별 탭 버튼 */
+.interview nav button {
+  position: relative;
+  width: 100%;
+  padding-left: 28px;
+  border: 0;
+  background: transparent;
+  color: #77736e;
+  font-size: 26px;
+  text-align: left;
+  cursor: pointer;
+  font-family: "EB Garamond";
+}
+
+/* active 버튼 */
+.interview nav button.active {
+  color: #eeeae3;
+}
+
+/* active orange bar */
+.interview nav button.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 17px;
+  height: 2px;
+  background: #FF6A17;
+  transform: translateY(-50%);
+}
+
+/* active 밑줄 */
+.interview nav button.active::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: -10px;
+  /* width: 230px; */
+  width: 85%;
+  height: 1px;
+  background: #77736e;
+}
+
+.active_mark {
+  display: none;
+}
+
+/* 인물 사진 */
+.interview_image {
+  /* width: 300px; */
+  width: 360px;
+  height: 500px;
+  border: 1px solid #3e3e3e;
+  overflow: hidden;
+}
+
+.interview_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ##########인터뷰######### */
+/* 인터뷰 텍스트 전체 wrap */
+.interview_txt {
+  /* width: 320px; */
+  width: 360px;
+  height: 500px;
+  padding: 25px 0;
+  background: #030303;
+  border-right: 1px solid #3e3e3e;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 내부 세로 정렬 */
+.interview_txt_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* 상단 정보 묶음 */
+.interview_tags {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* 인터뷰 라벨 */
+.interview_label {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-family: "Pretendard", sans-serif;
+  color: #bdb8b0;
+}
+
+/* 인물 이름 */
+.interview_name {
+  margin: 0 0 8px;
+  font-size: 26px;
+  line-height: 1.1;
+  color: #f0641e;
+  font-weight: 600;
+}
+
+.interview_role {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.2;
+  color: #8e8e8e;
+}
+
+/* 인터뷰 내용 wrap */
+.interview_quote {
+  width: 280px;
+  margin: 0 auto;
+  color: #bdb6a9;
+}
+
+/* 인터뷰 내용 텍스트 */
+.interview_quote p {
+  position: relative;
+  padding: 0 28px;
+  width: 250px;
+  font-size: 20px;
+  font-family: "Noto Serif KR", serif;
+  line-height: 1.6;
+  color: #bdb6a9;
+  word-break: keep-all;
+}
+
+/* JS에서 들어가는 문장 */
+.quote_body {
+  display: inline-block;
+  white-space: nowrap;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+/* 큰따옴표 이미지 */
+.quote_start_img,
+.quote_end_img {
+  position: absolute;
+  width: 20px;
+  height: auto;
+  display: block;
+}
+
+.quote_start_img {
+  left: 0;
+  top: 0;
+}
+
+.quote_end_img {
+  right: 0;
+  bottom: 0;
+}
+
+
+/* 번호 + 화살표 */
+.interview_page {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* 인덱스 번호 */
+.interview_num {
+  font-size: 12px;
+  color: #d8d0c7;
+}
+
+.interview_line {
+  width: 70px;
+  height: 1px;
+  background: #4c4c4c;
+}
+
+/* 화살표 */
+.interview_arrow_group {
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
+
+.interview_arrow_group img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* LP panel */
+.lp_panel {
+  /* width: 320px; */
+  width: 360px;
+  height: 500px;
+  border: 1px solid #3e3e3e;
+  background: #242424;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 프로그레스바 */
+.progress {
+  position: absolute;
+  left: 25px;
+  top: 30px;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 프로그레스 번호 */
+.progress_current,
+.progress_last {
+  font-size: 22px;
+  color: #eeeae3;
+}
+
+.progress_current {
+  color: #FF6A17;
+}
+
+/* 프로그레스 막대 정렬 */
+.progress_bar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* 프로그레스 개별 바 */
+.progress_tick {
+  width: 7px;
+  height: 1px;
+  background: #5d5a55;
+}
+
+.progress_tick.is_active {
+  background: #FF6A17;
+}
+
+/* 회전 LP 영역 */
+.visual_area {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+/* 회전 LP 레이어 2개 wrap */
+.rotate_wrap {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  right: -65px;
+  top: 35px;
+  transform-origin: 50% 50%;
+}
+
+/* 스크롤 텍스트 */
+.rotate_wrap p {
+  color: rgb(155, 155, 155);
+  position: relative;
+  top: 130px;
+  right: -85px;
+  z-index: 9999;
+  font-size: 14px;
+  font-family: "Pretendard";
+  transform: rotate(90deg);
+}
+
+.rotate_wrap p span {
+  color: #F0641E;
+}
+
+/* LP판 */
+.disc_image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/* LP라벨 + LP판 정중앙 */
+.label_image {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  left: 50%;
+  top: 50%;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  transform-origin: 50% 50%;
+  will-change: transform;
+}
+
+/* 오른쪽 박스 포켓 */
+.lp_right_box_image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 90px;
+  height: 500px;
+
+  z-index: 3;
+}
+
+/* 챕터 타이틀 */
+.chapter_txt {
+  position: absolute;
+  left: 20px;
+  bottom: 25px;
+  z-index: 5;
+}
+
+.chapter_title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #FF6A17;
+}
+
+.chapter_subtitle {
+  font-size: 18px;
+  color: #C8BFAF;
+}
+
+/* #######################TIME LINE ARCHIVE######################## */
+.timeline {
+  width: 80%;
+  margin: 150px auto;
+}
+
+/* 타이틀 */
+.timeline h2 {
+  font-size: 48px;
+  margin-bottom: 80px;
+}
+
+/* 이미지 트랙 */
+.timeline_image {
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* 이미지 */
+.timeline_image li {
+  width: 16%;
+  border: 2px solid #52514f;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.timeline_image li img {
+  width: 100%;
+  display: block;
+}
+
+/* 타임라인 전체 영역 */
+.timeline_track_area {
+  position: relative;
+  width: 100%;
+  margin: 50px auto;
+}
+
+/* 가운데 긴 선 */
+.timeline_track_area::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 100%;
+  height: 1px;
+  background: #7e7d7a;
+  z-index: 0;
+}
+
+/* 타임라인 ul */
+.timeline_txt {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #9a9690;
+}
+
+/* 화살표 li */
+.timeline_arrow {
+  width: 10px;
+  height: 20px;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 10px;
+}
+
+.timeline_arrow img {
+  width: 10px;
+  display: block;
+}
+
+/* 실제 연도별 텍스트 아이템 */
+.timeline_item {
+  width: 13.5%;
+  text-align: center;
+}
+
+/* 점 공통 스타일 */
+.timeline_dot {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* 클릭 가능한 큰 점 */
+.timeline_dot_button {
+  width: 13px;
+  height: 13px;
+  padding: 0;
+  border: 0;
+  background: #9a9690;
+  cursor: pointer;
+  transform: translateY(3.5px);
+}
+
+/* active 상태 큰 점 */
+.timeline_dot_button.active,
+.timeline_item.active .timeline_dot_button {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #7c503a;
+  background: #f0641e;
+  transform: translateY(0);
+}
+
+/* 작은 장식 점 */
+.timeline_dot_small {
+  width: 7px;
+  height: 7px;
+  margin-top: 6.5px;
+  padding: 0;
+  background: #9a9690;
+  border-radius: 50%;
+  flex: 0 0 7px;
+  pointer-events: none;
+}
+
+/* 연도 텍스트 */
+.timeline_item span {
+  display: block;
+  font-family: "Pretendard";
+  font-weight: 600;
+  margin-top: 24px;
+  margin-bottom: 20px;
+}
+
+/* 타임라인 제목 */
+.timeline_item h4 {
+  margin-bottom: 15px;
+  color: #9a9690;
+}
+
+/* 타임라인 설명 */
+.timeline_item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #9a9690;
+}
+
+/* 활성화된 타임라인 제목 */
+.timeline_item.active h4 {
+  color: #ff6a17;
+}
+
+
+
+/* js 효과 css 추가 */
+/* timeline active image effect */
+.timeline_image li {
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline_image li img {
+  display: block;
+  filter: grayscale(1) sepia(0.2) saturate(0.55) brightness(0.75) contrast(1.05);
+  transition: filter 0.3s ease;
+}
+
+.timeline_image li.active {
+  border-color: #f0641e;
+  box-shadow: 0 0 18px rgba(240, 100, 30, 0.35);
+}
+
+.timeline_image li.active img {
+  filter: grayscale(0) sepia(0.08) saturate(1.15) brightness(1.02) contrast(1.05);
+}
+
+.timeline_item.active span {
+  color: #f1eee6;
+}
+
+.timeline_item.active h4 {
+  color: #ff6a17;
+}
+
+
+/* #################### SOUND ANATOMY ######################## */
+.sound {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* 왼쪽+오른쪽 박스 정렬 */
+.lp_box_wrap {
+  display: flex;
+}
+
+/* 타이틀 */
+.sound h2 {
+  margin-bottom: 80px;
+}
+
+
+/* ### 왼쪽 LP상자 ### */
+.lp_frame {
+  position: relative;
+  flex: 0 0 520px;
+  width: 520px;
+}
+
+/* LP 이미지 */
+.lp_frame > div {
+  width: 420px;
+  height: auto;
+}
+
+.lp_frame > div img {
+  width: 100%;
+  display: block;
+}
+
+/* 연결 텍스트 전체 ul */
+.lp_part {
+  position: absolute;
+  left: -80px;
+  top: 40%;
+  transform: translateY(-50%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.lp_part li {
+  display: flex;
+  align-items: center;
+}
+
+.lp_part li:nth-child(1) {
+  position: relative;
+  left: 60px;
+}
+
+.lp_part li:nth-child(4) {
+  position: relative;
+  left: 60px;
+}
+
+/* 연결 텍스트 이름 */
+.lp_part .name {
+  width: 190px;
+}
+
+.lp_part .name p {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.lp_part .name span {
+  display: block;
+  margin-top: 5px;
+  color: #9a9690;
+}
+
+/* 연결 선, 점 */
+.connection {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.connection .line {
+  width: 90px;
+  height: 1px;
+  background: #aaaaaa;
+}
+
+.connection .dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #f0641e;
+}
+
+/* ### 오른쪽 박스 ### */
+.rightbox_wrap {
+  width: auto;
+
+}
+
+
+/* 탭버튼 */
+.lp_tab {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+
+/* 개별 탭버튼 */
+.lp_tab li {
+  position: relative;
+  flex: 1;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Pretendard";
+  font-weight: 300;
+  color: #9a9690;
+  cursor: pointer;
+}
+
+.lp_tab li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background: #9a9690;
+  transform: translateY(-50%);
+}
+
+/* active 버튼 */
+.lp_tab .active {
+  color: #F0641E;  
+  font-weight: 500;
+}
+
+.lp_tab .active span {
+  border-bottom: 3px #F0641E solid;
+}
+
+
+/* 첫번째 컨텐츠 박스 */
+/* 메인 텍스트 */
+.description h3 {
+  font-size: 30px;
+  font-weight: 500;
+  color: #F0641E;
+  margin-bottom: 30px;
+}
+
+/* 서브 텍스트 */
+.description p {
+  font-size: 18px;
+  color: #9A9690;
+  font-family: "Pretendard";
+  line-height: 1.8;
+}
+
+
+/* ###feature### */
+.feature {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0 40px;
+}
+
+.feature li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-family: "Pretendard";
+
+}
+
+.feature li img {
+  width: 70px;
+}
+
+.feature li p {
+  width: 90px;
+}
+
+.feature li p:nth-child(2) {
+  color: #9A9690;
+  font-size: 14px;
+}
+
+/* ###did you know 박스### */
+.know {
+  border: 1px solid #F0641E;
+  border-radius: 6px;
+  padding: 15px;
+  font-family: "Pretendard";
+  /* margin-top: 100px; */
+}
+
+.know_title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.know_sub {
+  color: #9A9690;
+}
+
+
+
+/* ### 두번째 박스 ### */
+.change .feature {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.change .feature li {
+  border: 1px solid #5B5651;
+  color: #9A9690;
+  font-family: "Pretendard";
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    flex: 1 1 0;
+  min-width: 120px;
+  max-width: 170px;
+  height: 60px;
+}
+
+.change .know {
+  border: 1px solid #F0641E;
+  border-radius: 6px;
+  padding: 15px;
+  font-family: "Pretendard";
+  /* margin-top: 100px; */
+}
+
+.change .know_title {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.change .know_sub {
+  color: #9A9690;
+}
+
+
+/* $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+/* active 박스 */
+.lp_txt_box.active {
+  display: block;
+}
+
+
+/* default 박스 */
+.lp_txt_box.default {
+  display: none;
+}
+
+
+/* &&&&&&& 등장 효과 &&&&&&& */
+/* SOUND ANATOMY 등장 전 상태 */
+.sound .lp_frame img {
+  opacity: 0;
+  transform: translateX(-60px) rotate(-4deg) scale(0.96);
+}
+
+.sound .lp_part li .name {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+.sound .lp_part li .connection .line {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.sound .lp_part li .connection .dot {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.sound .rightbox_wrap {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+/* active 됐을 때 실행 */
+.sound.show .lp_frame img {
+  animation: lpImageIn 1.2s ease forwards;
+}
+
+.sound.show .rightbox_wrap {
+  animation: soundRightIn 0.9s ease forwards;
+  animation-delay: 0.45s;
+}
+
+/* 부품 설명 순차 등장 */
+.sound.show .lp_part li .connection .line {
+  animation: lineGrow 0.55s ease forwards;
+}
+
+.sound.show .lp_part li .connection .dot {
+  animation: dotPop 0.35s ease forwards;
+}
+
+.sound.show .lp_part li .name {
+  animation: partTextIn 0.55s ease forwards;
+}
+
+/* 각 li 딜레이 */
+.sound.show .lp_part li:nth-child(1) .connection .line {
+  animation-delay: 0.6s;
+}
+
+.sound.show .lp_part li:nth-child(1) .connection .dot {
+  animation-delay: 1s;
+}
+
+.sound.show .lp_part li:nth-child(1) .name {
+  animation-delay: 1.1s;
+}
+
+.sound.show .lp_part li:nth-child(2) .connection .line {
+  animation-delay: 0.8s;
+}
+
+.sound.show .lp_part li:nth-child(2) .connection .dot {
+  animation-delay: 1.2s;
+}
+
+.sound.show .lp_part li:nth-child(2) .name {
+  animation-delay: 1.3s;
+}
+
+.sound.show .lp_part li:nth-child(3) .connection .line {
+  animation-delay: 1s;
+}
+
+.sound.show .lp_part li:nth-child(3) .connection .dot {
+  animation-delay: 1.4s;
+}
+
+.sound.show .lp_part li:nth-child(3) .name {
+  animation-delay: 1.5s;
+}
+
+.sound.show .lp_part li:nth-child(4) .connection .line {
+  animation-delay: 1.2s;
+}
+
+.sound.show .lp_part li:nth-child(4) .connection .dot {
+  animation-delay: 1.6s;
+}
+
+.sound.show .lp_part li:nth-child(4) .name {
+  animation-delay: 1.7s;
+}
+
+/* 키프레임 */
+@keyframes lpImageIn {
+  to {
+    opacity: 1;
+    transform: translateX(0) rotate(0) scale(1);
+  }
+}
+
+@keyframes soundRightIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lineGrow {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes dotPop {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes partTextIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ################### Subscribe#################### */
+.subscribe {
+  width: 80%;
+  height: 200px;
+  margin: 0 auto 100px;
+  border: #A5A198 1px solid;
+  border-radius: 6px;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub_left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sub_left .left_txt01 {
+  color: #A5A198;
+  font-size: 18px;
+  font-family: "Pretendard";
+}
+
+.sub_left .left_txt02 {
+  color: #C9C5BA;
+}
+
+/* 이메일 창 */
+.sub_right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sub_right input {
+  width: 330px;
+  height: 45px;
+  border: 1px solid #5B574F;
+  border-radius: 3px;
+  background: none;
+  padding: 10px;
+  color: #fff;
+}
+
+
+.sub_right button {
+  background: #e8e5dc;
+  border: none;
+  border-radius: 3px;
+  width: 110px;
+  height: 45px;
+  cursor: pointer;
+  font-family: "Pretendard";
+  font-weight: 500;
+  font-size: 16px;
+  transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sub_right button:hover {
+  background: #f0641e;
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(240, 100, 30, 0.28);
+}
+
+.sub_right button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(240, 100, 30, 0.18);
+}
+
