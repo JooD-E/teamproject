@@ -138,17 +138,23 @@
             </div>
 
             <div class="menu-log">
-                <?php if(!isset($_SESSION['userid'])) { ?>
-                <a class="menu-log-in" href="./seoulvinyl_login.php">
-                    <img src="../img/common/login.png" alt="로그인 하기">
-                    <p>Login</p>
-                </a>
-                <?php } else { ?>
-                <a class="menu-log-out" href="./logout.php">
-                    <img src="../img/common/logout.png" alt="로그아웃 하기">
-                    <p>Logout</p>
-                </a>
-                <?php } ?>
+                <?php
+                    if (!$userid) {
+                ?>
+                    <a class="menu-log-in" href="./seoulvinyl_login.php">
+                        <img src="../img/common/login.png" alt="로그인 하기">
+                        <p>Login</p>
+                    </a>
+                <?php
+                    } else {
+                ?>
+                    <a class="menu-log-out" href="./logout.php">
+                        <img src="../img/common/logout.png" alt="로그아웃 하기">
+                        <p>Logout</p>
+                    </a>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>

@@ -1,3 +1,42 @@
+<?php
+    session_start();
+
+    include "dbconn.php";
+    mysqli_query($connect, "set name utf8");
+
+    $page = isset($_GET["page"]) ? $_GET["page"] : 1;
+
+    $search_type = isset($_GET["search_type"]) ? $_GET["search_type"] : "";
+    $search_keyword = isset($_GET["search_keyword"]) ? $_GET["search_keyword"] : "";
+
+    if ($search_keyword != "") {
+        $col = "";
+        if ($search_type == "archive-subject") $col = "subject";
+        else if ($search_type == "archive-content") $col = "content";
+        else if ($search_type == "archive-name") $col = "name";
+
+        $sql = "SELECT * FROM board WHERE $col LIKE '%$search_keyword%' ORDER BY num DESC";
+        $search_params = "&search_type=$search_type&search_keyword=$search_keyword"; 
+    } else {
+        $sql = "SELECT * FROM board ORDER BY num DESC";
+        $search_params = "";
+    }
+    $result = mysqli_query($connect, $sql);
+    $total_record = mysqli_num_rows($result);
+
+    $scale = 10;
+
+    if($total_record % $scale == 0){
+        $total_page = floor($total_record / $scale);
+    } else {
+        $total_page = floor($total_record / $scale) + 1;
+    }
+
+    $start = ($page -1 ) * $scale;
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -150,12 +189,12 @@
             </nav>
 
             <div class="main-title-area">
-                <h2 class="main-title"><img src="../img/common/VINYL ARCHIVE.png" alt="게시판 메인 타이틀 이미지"></h2>
+                <h2 class="main-title"><a href="./board.php"><img src="../img/common/vinyl_archive.png" alt="VINYL ARCHIVE"></a></h2>
             </div>
 
             <div class="archive-container">
                 <div class="archive-header">
-                    <p class="total-count">▶ 총 120개의 게시물이 있습니다.</p>
+                    <p class="total-count">▶ 총 <?=$total_record?>개의 게시물이 있습니다.</p>
                     
                     <form action="" method="get" class="search-form">
                         <select name="search_type" class="search-select">
@@ -169,53 +208,97 @@
                 </div>
 
                 <div class="gallery-grid">
+                    <?php
+                        //글이 하나도 없을 때 
+                        if ($total_record == 0){
+                            echo "<div style='grid-column: 1 / -1; text-align: center; padding: 100px 0; color: #aaa; font-size: 16px;'> 등록된 게시물이 없습니다. 첫 번째 글의 주인공이 되어주세요!</div>";
+                        } else {
+                            for ($i = $start; $i < $start + $scale && $i < $total_record; $i++){
+                                mysqli_data_seek($result, $i);
+                                $row = mysqli_fetch_array($result);
+                                
+                                $num = $row["num"];
+                                $subject = $row["subject"];
+                                $regist_day = $row["regist_day"];
+                                $hit = $row["hit"];
+                                $likes = $row["likes"];
+                                $tags = $row["tags"];
+                                $thum = $row["thum"];
+
+                                if(empty($thum)){
+                                    $img_path = "../img/common/no_img.png";
+                                } else {
+                                    $img_path = "./data/" . $thum;
+                                }
+                        ?>
                     <div class="gallery-item">
                         <div class="gallery-card-box">
                             <div class="gallery-card-img">
-                                <img src="../img/common/no_img.png" alt="썸네일">
+                                <img src="<?=$img_path?>" alt="썸네일">
                             </div>
                             <div class="card-content">
-                                <span class="hashtags">#장비리뷰 #LP자랑 #일상TALK</span>
+                                <span class="hashtags"><?=$tags?></span>
                                 <h3 class="post-title">
-                                    <a href="view.php?num=1" class="stretched-link">게시물 제목</a>
+                                    <a href="view.php?num=<?=$num?>&page=<?=$page?>" class="stretched-link"><?=$subject?></a>
                                 </h3>
                                 <div class="card-footer">
-                                    <span class="gallery-date">2026.08.08</span>
-                                    <button class="like-btn">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
-                                            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="#f44336" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item-stats">
-                            <span>조회수 <span class="stats-strong">10</span></span>
-                            <span>좋아요 <span class="stats-strong">8</span></span>
+                            <span class="gallery-date"><?=$regist_day?></span>
+                            
+                            <button class="like-btn" data-num="<?=$num?>">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="#f44336" stroke-width="2"/>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-                    
                 </div>
-
-
+                <div class="item-stats">
+                    <span>조회수 <span class="stats-strong"><?=$hit?></span></span>
+                    
+                    <span>좋아요 <span class="stats-strong like-count-<?=$num?>"><?=$likes?></span></span>
+                </div>
+            </div>
+                    <?php
+                            } // for 문 끝
+                        } // if문 끝
+                    ?>
+                </div>
             </div>
 
             <div class="archive-bottom">
                 <div class="bottom-left"></div>
-
                 <div class="archive-pagination">
-                    <a href="#" class="page-arrow">&lt;</a>
-                    <a href="#" class="page-num active">1</a><span class="divider">|</span>
-                    <a href="#" class="page-num">2</a><span class="divider">|</span>
-                    <a href="#" class="page-num">3</a><span class="divider">|</span>
-                    <a href="#" class="page-num">4</a><span class="divider">|</span>
-                    <a href="#" class="page-num">5</a><span class="divider">|</span>
-                    <a href="#" class="page-num">6</a>
-                    <a href="#" class="page-arrow">&gt;</a>
+                    <?php
+                        if ($page > 1) {
+                            $prev = $page - 1;
+                            echo "<a href='board.php?page=$prev$search_params' class='page-arrow'>&lt;</a>";
+                        } else {
+                            echo "<a href='#' class='page-arrow' style='color:#555;'>&lt;</a>";
+                        }
+
+                        for ($i = 1; $i <= $total_page; $i++){
+                            if($page == $i){
+                                echo "<a href='#' class='page-num active'>$i</a>";
+                            } else {
+                                // 여기도 $search_params 추가
+                                echo "<a href='board.php?page=$i$search_params' class='page-num'>$i</a>";
+                            }
+                            if ($i != $total_page){
+                                echo "<span class='divider'>|</span>";
+                            }
+                        }
+
+                        if($page < $total_page) {
+                            $next = $page + 1;
+                            echo " <a href='board.php?page=$next$search_params' class='page-arrow'>&gt;</a>";
+                        } else {
+                            echo " <a href='#' class='page-arrow' style='color:#555;'>&gt;</a>";
+                        }
+                    ?>
                 </div>
 
                 <div class="bottom-right">
-                    <button type="button" class="archive-write-btn">게시글 작성</button>
+                    <button type="button" class="archive-write-btn" onclick="location.href='write_form.php'">게시글 작성</button>
                 </div>
             </div>
 
@@ -242,9 +325,9 @@
                 </ul>
                 
                 <ul class="footer-top__right">
-                    <li><a href="#"><img src="img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
-                    <li><a href="#"><img src="img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
-                    <li><a href="#"><img src="img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
+                    <li><a href="#"><img src="../img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
+                    <li><a href="#"><img src="../img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
+                    <li><a href="#"><img src="../img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
                 </ul>
             </div>
         </div>
@@ -263,11 +346,36 @@
 
 
             <div class="footer-bottom__escrow">
-                <img src="img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
+                <img src="../img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
                 <span>안전구매(에스크로) 서비스 가맹점</span>
             </div>
 
         </div>
     </footer>
+
+    <script>
+    $(document).ready(function() {
+        $('.like-btn').click(function(e) {
+            e.preventDefault();
+            
+            let btn = $(this);
+            let postNum = btn.attr('data-num');
+
+            $.ajax({
+                url: "like_update.php",
+                type: "POST",
+                data: { num: postNum },
+                success: function(response) {
+                    $('.like-count-' + postNum).text(response);
+                    
+                    btn.find('path').attr('fill', '#f44336');
+                },
+                error: function() {
+                    alert("서버 통신에 실패했습니다.");
+                }
+            });
+        });
+    });
+    </script>
 </body>
 </html>
