@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seoul Vinyl</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/magazine.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/common.js"></script>
+
+
+    
+</head>
+<body>
+  
+ <!-- ======================================================
+                Header  -> common.css  common.js 연결 /
+    =========================================================-->
+    <header class="site-header">
+        <div class="site-header-inner">
+            <h1 class="logo">
+                <a href="main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+            </h1>
+
+            <nav class="util-nav">
+                <ul>
+                    <li>
+                        <button type="button" class="btn-search">
+                        <img src="img/common/search.png" alt="검색 버튼">
+                        </button>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/common/Group.png" alt="레코드 이미지">
+                        </a>
+                    </li>
+                    <li><a href="php/mypage.php"><img src="img/common/user.png" alt="내 정보"></a></li>
+                    <li>
+                        <button type="button" class="btn-hamburger" aria-label="메뉴 열기/닫기">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ======================================================
+                MENU  -> common.css  common.js 연결 /
+    =========================================================-->
+
+    <div class="full-page-menu">
+
+        <div class="menu-container">
+            <div class="menu-inner">
+                <nav class="menu-util-nav" aria-label="사용자 유틸 메뉴">
+                    <ul>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">My page</a></li>
+                        <li><a href="#">Order</a></li>
+                    </ul>
+                </nav>
+
+                <nav class="main-menu-nav">
+                    <ul>
+                        <li>
+                            <span class="main-menu-num">01</span>
+                            <a href="./product.html" class="depth1">SHOP</a>
+                            <div class="depth2">
+                                <a href="./product.html">ALL RECOREDS</a>
+                                <a href="./product.html">NEW ARRIVAL</a>
+                                <a href="./product.html">DJ'S PICK</a>
+                                <a href="./product.html">GENRE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">02</span>
+                            <a href="./discovery.html" class="depth1">DISCOVER</a>
+                            <div class="depth2">
+                                <a href="./discovery.html">SEOUL DRIVE</a>
+                                <a href="./discovery.html">RAINY NIGHT</a>
+                                <a href="./discovery.html">SUNDAY MORNING</a>
+                                <a href="./discovery.html">SUMMER MOOD</a>
+                                <a href="./discovery.html">LATE COFFEE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">03</span>
+                            <a href="./about.html" class="depth1">ABOUT US</a>
+                            <div class="depth2">
+                                <a href="./about.html">BRAND STORY</a>
+                                <a href="./about.html">STORE INFO</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="menu-footer">
+                    <h3>Seoul Vinyl</h3>
+                    <p>Contact Us</p>
+                    <a href="#">Instagram @seoulvinyl</a>
+                </div>
+            </div>
+
+            <div class="menu-log">
+                <a class="menu-log-in" href="php/seoulvinyl_login.php">
+                    <img src="img/common/login.png" alt="로그인 하기">
+                    <p>Login</p>
+                </a>
+                <a class="menu-log-out" href="php/logout.php">
+                    <img src="img/common/logout.png" alt="로그아웃 하기">
+                    <p>Logout</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ======================================================
+                SEARCH  -> common.css  common.js 연결 /
+    =========================================================-->
+
+    <div class="full-page-search">
+        <button type="button" class="btn-close-search" aria-label="검색창 닫기">
+            <span class="bar-search"></span>
+            <span class="bar-search"></span>
+        </button>
+
+        <div class="search-container">
+            <img src="img/common/search.png" alt="검색 아이콘" class="search-icon-inner">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요..." autocomplete="off">
+        </div>
+    </div>
+
+<!-- ==========================================================
+                        banner
+================================================================-->
+<section class="magazine_banner">
+  <div class="banner_image"><img src="img/magazine/magazine_banner.png" alt="배너이미지"></div>
+  <div class="banner_txt">
+    <h2>Grooves <br> of Time:</h2>
+    <p>The Living Archive of <br> SEOUL VINYL</p>
+    <div class="divider"></div>
+    <article>A quiet record of Seoul's analog culture, told through the people, places, and sounds that keep vinyl alive.
+   </article>
+   <article>
+    From small listening rooms to late-night record shops, Seoul Vinyl traces the memories hidden in every groove. This archive follows collectors, selectors, and sound lovers who continue to shape the city's analog rhythm.
+   </article>
+  </div>
+</section>
+<!-- ==========================================================
+                         AMBASSADOR INTERVIEW
+================================================================-->
+<section class="interview">
+  <div class="interview_wrapper">
+    <h2>AMBASSADOR INTERVIEW</h2>
+
+    <div class="interview_inner">
+
+      <!--####### chapter tab 시작#####-->
+      <nav>  
+        <button class="active" type="button" data_chapter="01">
+          <span class="active_mark"></span>
+          <span class="tab">Chapter 01</span>
+        </button>
+        <button type="button" data_chapter="02">
+          <span class="tab">Chapter 02</span>
+        </button>
+        <button type="button" data_chapter="03">
+          <span class="tab">Chapter 03</span>
+        </button>
+        <button type="button" data_chapter="04">
+          <span class="tab">Chapter 04</span>
+        </button>
+      </nav>  
+      <!--####### chapter tab 종료#####-->
+
+      <div class="interview_image"><img src="img/magazine/interview01.png" alt="인물사진"></div>
+
+      <article class="interview_txt">
+        <div class="interview_txt_wrapper">
+          <div class="interview_tags">
+            <p class="interview_label">INTERVIEW WITH</p>
+
+            <h3 class="interview_name">DJ MARK KAMINS</h3> 
+            <p class="interview_role">Seoul Drive / Producer</p>
+          </div>
+
+          <!-- 인터뷰 내용 -->
+          <div class="interview_quote">
+             <p>
+               서울의 밤은 레코드처럼 천천히 쌓여 있어요. 그 안엔 각자의 기억과 리듬이 살고 있죠.
+             </p>
+          </div>
+        </div>
+
+          <!-- 인터뷰 내용 밑 화살표 파트 -->
+          <div class="interview_page">
+            <span class="interview_num">01</span>
+            <span class="interview_line"></span>
+            <span class="interview_num">05</span>
+
+            <div class="interview_arrow_group">
+              <img src="img/magazine/arrow_next_circle.png" alt="이전버튼">
+              <img src="img/magazine/arrow_prev_circle.png" alt="다음버튼">
+            </div>
+          </div>
+        </article>
+
+        <div class="lp_panel">
+
+          <!-- 프로그레스바 -->
+          <div class="progress">
+            <span class="progress_current">01</span>
+
+            <div class="progress_bar">
+              <span class="progress_tick is_active"></span>
+              <span class="progress_tick is_active"></span>
+              <span class="progress_tick is_active"></span>
+              <span class="progress_tick is_active"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+              <span class="progress_tick"></span>
+            </div>
+
+            <span class="progress_last">04</span>
+          </div>
+          <!-- 프로그레스바 -->
+
+          <!-- 회전 LP 영역 -->
+          <div class="visual_area">
+            <div class="rotate_wrap">
+              <img class="disc_image" src="img/magazine/LP_whole.png" alt="LP이미지"/>
+              <img class="label_image" src="img/magazine/LP_label.png" alt="LP라벨 이미지"/>
+              <p><span>SCROLL</span> OVER THE LP</p>
+            </div>
+
+            <img class="lp_right_box_image" src="img/magazine/LP_rightbox_600.png" alt="LP상자 이미지"/>
+          </div>
+
+          <!-- chapter text 영역 -->
+          <div class="chapter_txt">
+            <h4 class="chapter_title">Chapter 01</h4>
+            <p class="chapter_subtitle">Morning crate dig</p>
+          </div>
+
+        </div>
+      
+      
+    </div> <!--interview inner-->
+
+  </div> <!--interview wrapper-->
+</section>
+
+<section class="timeline">
+  <h2>ARCHIVE TIMELINE</h2>
+  <ul class="timeline_image">
+    <li><img src="img/magazine/archive01.png" alt="이미지"></li>
+    <li><img src="img/magazine/archive02.png" alt="이미지"></li>
+    <li><img src="img/magazine/archive03.png" alt="이미지"></li>
+    <li><img src="img/magazine/archive04.png" alt="이미지"></li>
+    <li><img src="img/magazine/archive05.png" alt="이미지"></li>
+    <li><img src="img/magazine/archive06.png" alt="이미지"></li>
+  </ul>
+
+  <div class="timeline_track_area">
+
+ 
+  <ul class="timeline_txt">
+    <li class="timeline_arrow"><img src="img/magazine/timeline_arrow_left.png" alt="화살표"></li>
+    <li class="timeline_item active">
+      <button class="timeline_dot timeline_dot_button active" type="button"></button>
+      <span>2013</span>
+      <h4>THE BEGINNING</h4>
+      <p>성수동의 작은 공간에서 SEOUL VINYL이 문을 열다</p>
+    </li>
+
+    <li class="timeline_dot timeline_dot_small"></li>
+
+  <li class="timeline_item">
+    <button class="timeline_dot timeline_dot_button" type="button"></button>
+    <span>2015</span>
+    <h4>FIRST COLLECTION</h4>
+    <p>사람과 사운드를 담은 첫 컴필레이션 발행</p>
+  </li>
+
+  <li class="timeline_dot timeline_dot_small"></li>
+
+  <li class="timeline_item">
+    <button class="timeline_dot timeline_dot_button" type="button"></button>
+    <span>2017</span>
+    <h4>EXPANSION</h4>
+    <p>음반 쇼룸 오픈과 함께 온-오프라인 아카이브 확장</p>
+  </li>
+
+ <li class="timeline_dot timeline_dot_small"></li>
+
+  <li class="timeline_item">
+    <button class="timeline_dot timeline_dot_button" type="button" data_index="3"></button>
+    <span>2019</span>
+    <h4>SEOUL DRIVE</h4>
+    <p>지역별 바이닐 무드 추천 출시</p>
+  </li>
+
+  <li class="timeline_dot timeline_dot_small"></li>
+
+  <li class="timeline_item">
+    <button class="timeline_dot timeline_dot_button" type="button"></button>
+    <span>2022</span>
+    <h4>GLOBAL CONNECT</h4>
+    <p>도쿄, 베를린 바이닐샵과 협업 프로젝트 시작</p>
+  </li>
+
+  <li class="timeline_dot timeline_dot_small"></li>
+
+  <li class="timeline_item">
+    <button class="timeline_dot timeline_dot_button" type="button"></button>
+    <span>2024</span>
+    <h4>CURATION LAB</h4>
+    <p>사운드 큐레이션과 리서치 팀 론칭</p>
+  </li>
+  <li class="timeline_arrow"><img src="img/magazine/timeline_arrow_right.png" alt="화살표"></li>
+</ul>
+
+</section>
+
+<!-- ========================================================
+                    SOUND ANATOMY
+==============================================================-->
+<section class="sound">
+  <h2>SOUND ANATOMY</h2>
+
+  <div class="lp_box_wrap">
+
+  <div class="lp_frame">
+    <div><img src="img/magazine/LP_half.png" alt="LP이미지"></div>
+    <ul class="lp_part">
+      <li>
+        <div class="name">
+          <p>VINYL COMPOUND</p>
+          <span>180g Virgin Vinyl</span>
+        </div>
+        <div class="connection">
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+      </li>
+
+      <li>
+        <div class="name">
+          <p>GROOVE CUT</p>
+          <span>Precision Cutting</span>
+        </div>
+        <div class="connection">
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+      </li>
+
+      <li>
+        <div class="name">
+          <p>LABEL ARTWORK</p>
+          <span>Original Design</span>
+        </div>
+        <div class="connection">
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+      </li>
+
+      <li>
+        <div class="name">
+          <p>SPINDLE HOLE</p>
+          <span>7mm Center Hole</span>
+        </div>
+        <div class="connection">
+          <div class="line"></div>
+          <div class="dot"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <div class="rightbox_wrap">
+    <ul class="lp_tab">
+      <li class="active"><span>MATERIAL</span></li>
+      <li><span>PRESSING</span></li>
+      <li><span>MASTERING</span></li>
+    </ul>
+ 
+  <div class="lp_txt_box">
+    <div class="description">
+      <h3>PREMIUM ANALOG MATERIAL</h3>
+      <p>SEOUL VINYL은 외부의 사운드를 위해 엄선된 180g Virgin Vinyl을 사용합니다. 넓은 음압 리스폰스와 HDPE 소재는 깊은 저역과 선명한 고역을 동시에 재현하며, 시간이 지나도 남아있는 내구성을 제공합니다.</p>
+    </div>
+    <ul class="feature">
+      <li>
+        <img src="img/magazine/circle_line.png" alt="이미지">
+        <div>
+          <p>180g</p>
+          <p>Weight</p>
+        </div>
+      </li>
+       <li>
+        <img src="img/magazine/circle_line.png" alt="이미지">
+        <div>
+          <p>HDPE</p>
+          <p>Virgin Vinyl</p>
+        </div>
+      </li>
+       <li>
+        <img src="img/magazine/square_line.png" alt="이미지">
+        <div>
+          <p>Anti-Static</p>
+          <p>Inner Sleeve</p>
+        </div>
+      </li>
+       <li>
+        <img src="img/magazine/circle_line.png" alt="이미지">
+        <div>
+          <p>Quality</p>
+          <p>Control</p>
+        </div>
+      </li>
+    </ul>
+
+    <div class="know">
+      <p class="know_title">DID YOU KNOW</p>
+      <p class="know_sub">바이닐은 두께와 무게만큼 톤의 안정감과 표면 노이즈에 영향을 줍니다.</p>
+    </div>
+  </div>
+
+  <div class="lp_txt_box default change">
+    <div class="description">
+      <h3>PRESSED INTO MEMORY</h3>
+      <p>바이닐은 음악을 담는 매체를 넘어, 소리를 손에 잡히는 무게와 표면으로 바꾸는 방식입니다. 따뜻한 압력, 천천히 식어가는 표면, 그리고 손끝에 남는 얇은 마찰감까지. 프레싱은 음악에 물리적인 시간을 입히는 과정입니다..</p>
+    </div>
+    <ul class="feature">
+      <li>Warm Weight</li>
+      <li>Slow Cooling</li>
+      <li>Tactile Surface</li>
+      <li>Analog Noise</li>
+    </ul>
+
+    <div class="know">
+      <p class="know_title">DID YOU KNOW</p>
+      <p class="know_sub">좋은 프레싱은 완벽히 조용한 표면보다, 음악을 해치지 않는 자연스러운 질감을 남깁니다.</p>
+    </div>
+  </div>
+
+  <div class="lp_txt_box default change">
+    <div class="description">
+      <h3>TUNED FOR THE NEEDLE</h3>
+      <p>바이닐 마스터링은 소리를 더 크게 만드는 일이 아니라, 바늘이 따라갈 수 있는 흐름으로 음악을 다시 정리하는 일입니다.  저역은 더 단단하게, 고역은 더 부드럽게,  공간감은 홈의 깊이 안에서 자연스럽게 펼쳐집니다.</p>
+    </div>
+    <ul class="feature">
+      <li>Warm Low-End</li>
+      <li>Soft Highs</li>
+      <li>Needle Flow</li>
+      <li>Groove Balance</li>
+    </ul>
+
+    <div class="know">
+      <p class="know_title">DID YOU KNOW</p>
+      <p class="know_sub">바이닐에서 좋은 마스터는 크게 들리는 소리보다 오래 들어도 피로하지 않은 소리에 가깝습니다.</p>
+    </div>
+   </div>
+   </div>
+
+  </div>
+</section>
+
+<!-- ======================================================
+                      subscribe
+    =========================================================-->
+<section class="subscribe">
+  <div class="sub_left">
+    <h2>SEOUL VINYL</h2>
+    <p class="left_txt01">Magazine · Journal · Culture Essay · People · Scene Report</p>
+    <p class="left_txt02">새로운 매거진 글과 서울바이닐의 문화 기록을 받아보세요.</p>
+  </div>
+
+  <div class="sub_right">
+    <input type="text" placeholder="Email address">
+    <button type="button">Subscribe</button>
+  </div>
+
+</section>
+
+<!-- ======================================================
+                Footer  -> common.css 연결 
+    =========================================================-->
+
+    <footer>
+        <div class="footer-top-section">
+            <div class="footer-top-container">
+                <ul class="footer-top__left">
+                    <li><a href="#"><strong>문의</strong></a></li>
+                    <li><a href="#"><strong>이용약관</strong></a></li>
+                    <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+                    <li><a href="#"><strong>사업자정보확인</strong></a></li>
+                </ul>
+                
+                <ul class="footer-top__right">
+                    <li><a href="#"><img src="img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
+                    <li><a href="#"><img src="img/common/instagram_icon_v2.png" alt="인스타그램 아이콘"></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom-section">
+                <ul class="footer-bottom__txt">
+                    <li>상호 : 주식회사 서울바이닐(SEOUL VINYL Co.,Ltd)</li>
+                    <li>대표 : 이진욱</li>
+                    <li>개인정보관리책임자 : 이진욱</li>
+                    <li>전화 : 02-792-3110</li>
+                    <li>이메일 : whatsupjin@hanmail.net</li>
+                    <li>주소 : 서울특별시 용산구 신흥로 30, 1층/2층</li>
+                    <li>사업자등록번호 : 713-81-02189</li>
+                    <li>통신판매 : 제 2020-서울용산-2144호</li>
+                </ul>
+
+
+            <div class="footer-bottom__escrow">
+                <img src="img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
+                <span>안전구매(에스크로) 서비스 가맹점</span>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="js/magazine.js"></script>
+</body>
+</html>
