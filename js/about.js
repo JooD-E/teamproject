@@ -136,6 +136,38 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
 
+// =====================
+// 카카오 지도
+// =====================
+kakao.maps.load(function() {
+    var fallback = document.getElementById('map-fallback');
+    if (fallback) fallback.style.display = 'flex';
+
+    var container = document.getElementById('kakao-map');
+    var options = {
+        center: new kakao.maps.LatLng(37.5410460922064, 126.98724102699),
+        level: 3
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    if (fallback) fallback.style.display = 'none';
+
+    var marker = new kakao.maps.Marker({
+        position: new kakao.maps.LatLng(37.5410460922064, 126.98724102699)
+    });
+    marker.setMap(map);
+
+    var content = '<div style="padding:8px 14px;margin:0;font-size:13px;font-weight:700;background:#202020;color:#EBE8E8;border-radius:6px;white-space:nowrap;">Seoul Vinyl</div>';
+
+    var customOverlay = new kakao.maps.CustomOverlay({
+        position: new kakao.maps.LatLng(37.5410460922064, 126.98724102699),
+        content: content,
+        xAnchor: 0.5,
+        yAnchor: 2.3
+    });
+    customOverlay.setMap(map);
+});
+
 
 // =====================
 // About 갤러리

@@ -10,6 +10,7 @@
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="js/common.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5fd49b3263e3f7b5720bcfdeeb23037e"></script>
 </head>
 <body>
     <!-- ======================================================
@@ -18,7 +19,7 @@
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
-                <a href="/main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+                <a href="./main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
             </h1>
 
             <nav class="util-nav">
@@ -33,12 +34,7 @@
                             <img src="img/common/Group.png" alt="레코드 이미지">
                         </a>
                     </li>
-                    <li><a href="#"><img src="img/common/user.png" alt="내 정보"></a></li>
-                    <!-- <li>
-                        <button type="button" class="btn-hamburger">
-                            <img src="img/common/hamburger.png" alt="햄버거 메뉴">
-                        </button>
-                    </li> -->
+                    <li><a href="php/mypage.php"><img src="img/common/user.png" alt="내 정보"></a></li>
                     <li>
                         <button type="button" class="btn-hamburger" aria-label="메뉴 열기/닫기">
                             <span class="bar"></span>
@@ -56,9 +52,6 @@
     =========================================================-->
 
     <div class="full-page-menu">
-        <!-- <button type="button" class="close-menu-btn">
-            <img src="img/common/close.png" alt="메뉴 닫기 버튼">
-        </button> -->
 
         <div class="menu-container">
             <div class="menu-inner">
@@ -74,31 +67,31 @@
                     <ul>
                         <li>
                             <span class="main-menu-num">01</span>
-                            <a href="#" class="depth1">SHOP</a>
+                            <a href="./product.html" class="depth1">SHOP</a>
                             <div class="depth2">
-                                <a href="#">ALL RECOREDS</a>
-                                <a href="#">NEW ARRIVAL</a>
-                                <a href="#">DJ'S PICK</a>
-                                <a href="#">GENRE</a>
+                                <a href="./product.html">ALL RECOREDS</a>
+                                <a href="./product.html">NEW ARRIVAL</a>
+                                <a href="./product.html">DJ'S PICK</a>
+                                <a href="./product.html">GENRE</a>
                             </div>
                         </li>
                         <li>
                             <span class="main-menu-num">02</span>
-                            <a href="#" class="depth1">DISCOVER</a>
+                            <a href="./discovery.html" class="depth1">DISCOVER</a>
                             <div class="depth2">
-                                <a href="#">SEOUL DRIVE</a>
-                                <a href="#">RAINY NIGHT</a>
-                                <a href="#">SUNDAY MORNING</a>
-                                <a href="#">SUMMER MOOD</a>
-                                <a href="#">LATE COFFEE</a>
+                                <a href="./discovery.html">SEOUL DRIVE</a>
+                                <a href="./discovery.html">RAINY NIGHT</a>
+                                <a href="./discovery.html">SUNDAY MORNING</a>
+                                <a href="./discovery.html">SUMMER MOOD</a>
+                                <a href="./discovery.html">LATE COFFEE</a>
                             </div>
                         </li>
                         <li>
                             <span class="main-menu-num">03</span>
-                            <a href="#" class="depth1">ABOUT US</a>
+                            <a href="./about.html" class="depth1">ABOUT US</a>
                             <div class="depth2">
-                                <a href="#">BRAND STORY</a>
-                                <a href="#">STORE INFO</a>
+                                <a href="./about.html">BRAND STORY</a>
+                                <a href="./about.html">STORE INFO</a>
                             </div>
                         </li>
                     </ul>
@@ -112,17 +105,35 @@
             </div>
 
             <div class="menu-log">
-                <a class="menu-log-in" href="#">
+                <a class="menu-log-in" href="php/seoulvinyl_login.php">
                     <img src="img/common/login.png" alt="로그인 하기">
                     <p>Login</p>
                 </a>
-                <a class="menu-log-out" href="#">
+                <a class="menu-log-out" href="php/logout.php">
                     <img src="img/common/logout.png" alt="로그아웃 하기">
                     <p>Logout</p>
                 </a>
             </div>
         </div>
     </div>
+
+
+    <!-- ======================================================
+                SEARCH  -> common.css  common.js 연결 /
+    =========================================================-->
+
+    <div class="full-page-search">
+        <button type="button" class="btn-close-search" aria-label="검색창 닫기">
+            <span class="bar-search"></span>
+            <span class="bar-search"></span>
+        </button>
+
+        <div class="search-container">
+            <img src="img/common/search.png" alt="검색 아이콘" class="search-icon-inner">
+            <input type="text" class="search-input" placeholder="검색어를 입력하세요..." autocomplete="off">
+        </div>
+    </div>
+    
 
     <section id="main">
         <span class="line01"></span>
@@ -199,11 +210,10 @@
         <div class="title-underline"><img src="img/about/title-under.png" alt=""></div>
 
         <div class="map-wrapper">
-            <!--
             <div id="kakao-map"></div>
-            <div class="map-fallback" id="map-fallback" style="display:none;">지도를 불러오는 중입니다…</div>
+            <div class="map-fallback" id="map-fallback">지도를 불러오는 중입니다…</div>
             <div class="map-controls">
-                <a class="map-btn" href="https://map.kakao.com/link/to/서울바이닐,37.5384,126.9646" target="_blank" rel="noopener">
+                <a class="map-btn" href="https://map.kakao.com/link/to/서울바이닐,37.5410460922064,126.98724102699" target="_blank" rel="noopener">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/>
                 </svg>
@@ -216,7 +226,6 @@
                 지도 앱으로 보기
                 </a>
             </div>
-            -->
         </div>
 
         <div class="store-header">
