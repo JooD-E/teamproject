@@ -132,6 +132,18 @@
                                 <a href="../about.html">STORE INFO</a>
                             </div>
                         </li>
+                        <li>
+                            <span class="main-menu-num">04</span>
+                            <a href="../magazine.html" class="depth1">MAGAZINE</a>
+                            <div class="depth2">
+                                <a href="../magazine.html">INTERVIEW</a>
+                                <a href="../magazine.html">TIMELINE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">05</span>
+                            <a href="../php/board.php" class="depth1">BOARD</a>
+                        </li>
                     </ul>
                 </nav>
 
