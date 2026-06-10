@@ -1,8 +1,9 @@
 <?php
     session_start();
-
+    $userid = isset($_SESSION["userid"]) ? $_SESSION["userid"] : "";
+    
     include "dbconn.php";
-    mysqli_query($connect, "set name utf8");
+    mysqli_query($connect, "set names utf8"); 
 
     $page = isset($_GET["page"]) ? $_GET["page"] : 1;
 
@@ -13,7 +14,7 @@
         $col = "";
         if ($search_type == "archive-subject") $col = "subject";
         else if ($search_type == "archive-content") $col = "content";
-        else if ($search_type == "archive-name") $col = "name";
+        else if ($search_type == "archive-name") $col = "id"; 
 
         $sql = "SELECT * FROM board WHERE $col LIKE '%$search_keyword%' ORDER BY num DESC";
         $search_params = "&search_type=$search_type&search_keyword=$search_keyword"; 
@@ -21,6 +22,7 @@
         $sql = "SELECT * FROM board ORDER BY num DESC";
         $search_params = "";
     }
+    
     $result = mysqli_query($connect, $sql);
     $total_record = mysqli_num_rows($result);
 
@@ -33,8 +35,6 @@
     }
 
     $start = ($page -1 ) * $scale;
-
-
 ?>
 
 <!DOCTYPE html>
@@ -52,13 +52,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../js/common.js"></script>
-
-
 </head>
 <body>
-    <!-- ======================================================
-                Header  -> common.css  common.js 연결 /
-    =========================================================-->
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
@@ -90,12 +85,7 @@
         </div>
     </header>
 
-    <!-- ======================================================
-                MENU  -> common.css  common.js 연결 /
-    =========================================================-->
-
     <div class="full-page-menu">
-
         <div class="menu-container">
             <div class="menu-inner">
                 <nav class="menu-util-nav" aria-label="사용자 유틸 메뉴">
@@ -158,7 +148,7 @@
                 <?php
                     } else {
                 ?>
-                    <a class="menu-log-out" href="./logout.php">
+                    <a class="menu-log-out" href="./logout.php" style="display: flex !important;">
                         <img src="../img/common/logout.png" alt="로그아웃 하기">
                         <p>Logout</p>
                     </a>
@@ -168,11 +158,6 @@
             </div>
         </div>
     </div>
-
-
-    <!-- ======================================================
-                SEARCH  -> common.css  common.js 연결 /
-    =========================================================-->
 
     <div class="full-page-search">
         <button type="button" class="btn-close-search" aria-label="검색창 닫기">
@@ -185,7 +170,6 @@
             <input type="text" class="search-input" placeholder="검색어를 입력하세요..." autocomplete="off">
         </div>
     </div>
-
 
     <main>
         <section class="archive-area">
@@ -218,9 +202,8 @@
 
                 <div class="gallery-grid">
                     <?php
-                        //글이 하나도 없을 때 
                         if ($total_record == 0){
-                            echo "<div style='grid-column: 1 / -1; text-align: center; padding: 100px 0; color: #aaa; font-size: 16px;'> 등록된 게시물이 없습니다. 첫 번째 글의 주인공이 되어주세요!</div>";
+                            echo "<div style='grid-column: 1 / -1; text-align: center; padding: 100px 0; color: #aaa; font-size: 16px;'> 검색 결과나 등록된 게시물이 없습니다!</div>";
                         } else {
                             for ($i = $start; $i < $start + $scale && $i < $total_record; $i++){
                                 mysqli_data_seek($result, $i);
@@ -253,7 +236,7 @@
                                 <div class="card-footer">
                             <span class="gallery-date"><?=$regist_day?></span>
                             
-                            <button class="like-btn" data-num="<?=$num?>">
+                            <button type="button" class="like-btn" data-num="<?=$num?>" style="position: relative; z-index: 10; background:none; border:none; cursor:pointer;">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
                                     <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="none" stroke="#f44336" stroke-width="2"/>
                                 </svg>
@@ -263,13 +246,12 @@
                 </div>
                 <div class="item-stats">
                     <span>조회수 <span class="stats-strong"><?=$hit?></span></span>
-                    
                     <span>좋아요 <span class="stats-strong like-count-<?=$num?>"><?=$likes?></span></span>
                 </div>
             </div>
                     <?php
-                            } // for 문 끝
-                        } // if문 끝
+                            } 
+                        } 
                     ?>
                 </div>
             </div>
@@ -289,7 +271,6 @@
                             if($page == $i){
                                 echo "<a href='#' class='page-num active'>$i</a>";
                             } else {
-                                // 여기도 $search_params 추가
                                 echo "<a href='board.php?page=$i$search_params' class='page-num'>$i</a>";
                             }
                             if ($i != $total_page){
@@ -310,18 +291,8 @@
                     <button type="button" class="archive-write-btn" onclick="location.href='write_form.php'">게시글 작성</button>
                 </div>
             </div>
-
         </section>
     </main>
-
-
-
-
-
-    
-    <!-- ======================================================
-                Footer  -> common.css 연결 
-    =========================================================-->
 
     <footer>
         <div class="footer-top-section">
@@ -332,7 +303,6 @@
                     <li><a href="#"><strong>개인정보처리방침</strong></a></li>
                     <li><a href="#"><strong>사업자정보확인</strong></a></li>
                 </ul>
-                
                 <ul class="footer-top__right">
                     <li><a href="#"><img src="../img/common/phone_icon_v2.png" alt="전화 아이콘"></a></li>
                     <li><a href="#"><img src="../img/common/mail_icon_v2.png" alt="메일 아이콘"></a></li>
@@ -353,12 +323,10 @@
                     <li>통신판매 : 제 2020-서울용산-2144호</li>
                 </ul>
 
-
             <div class="footer-bottom__escrow">
                 <img src="../img/common/escrow_inicisPay.png" alt="안전구매 에스크로 이미지">
                 <span>안전구매(에스크로) 서비스 가맹점</span>
             </div>
-
         </div>
     </footer>
 
@@ -366,6 +334,7 @@
     $(document).ready(function() {
         $('.like-btn').click(function(e) {
             e.preventDefault();
+            e.stopPropagation(); 
             
             let btn = $(this);
             let postNum = btn.attr('data-num');
@@ -376,7 +345,6 @@
                 data: { num: postNum },
                 success: function(response) {
                     $('.like-count-' + postNum).text(response);
-                    
                     btn.find('path').attr('fill', '#f44336');
                 },
                 error: function() {

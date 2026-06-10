@@ -175,7 +175,7 @@ h2 {font-size:48px;} /* DJ's PICK, New Arrival, Magazine 등 h2 폰트 사이즈
 .menu-footer {position:absolute;bottom:5%;left:32%;}
 
 .menu-log {position:absolute;right:5%;bottom:5%;}
-.menu-log .menu-log-out {display:none;}
+/* .menu-log .menu-log-out {display:none;} */
 .menu-log a{font-size:24px;display:flex;flex-direction:column;align-items: center;transition:all 0.5s ease;}
 .menu-log a img {width:65px;}
 .menu-log a:hover {transform:scale(1.1);}
