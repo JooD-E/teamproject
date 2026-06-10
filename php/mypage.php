@@ -21,7 +21,7 @@
 
     $username = $row['name'];
     $user_address = $row['addr'];
-    $user_email = $row['email'];
+    $user_email = $row['email'] ? $row['email'] : "이메일 데이터가 비어있습니다";
     
     $join_date = $row['regist_day'];
 
@@ -198,14 +198,14 @@
                             <img class="truckimg" src="../img/common/truck.png" alt="주문 배송 이미지">
                             <div class="summary-hr"></div>
                             <p>주문 / 배송 내역</p>
-                            <span><?= $order_count ?>건</span>
+                            <span>2건</span>
                         </div>
 
                         <div class="summary-utilbox">
                             <img src="../img/common/heart.png" alt="하트 이미지">
                             <div class="summary-hr"></div>
                             <p>위시 리스트</p>
-                            <span><?= $wishlist_count ?>개</span>
+                            <span>12개</span>
                         </div>
 
                         <div class="summary-utilbox">
