@@ -6,7 +6,7 @@
     $email1 = $_POST['email1'];
     $email2 = $_POST['email2'];
     $addr  = $_POST['addr'];
-
+    $email = $email1 . "@" . $email2;
     include "dbconn.php"; 
 
     mysqli_query($connect, "set names utf8");
@@ -39,7 +39,6 @@
             </script>
         ");
     } else {
-        // 혹시 모를 DB 에러 발생 시
         echo("
             <script>
                 window.alert('회원가입 처리 중 오류가 발생했습니다. 다시 시도해 주세요.');
@@ -48,6 +47,5 @@
         ");
     }
 
-    // DB 연결 종료
     mysqli_close($connect);
 ?>

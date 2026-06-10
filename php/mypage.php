@@ -21,7 +21,7 @@
 
     $username = $row['name'];
     $user_address = $row['addr'];
-    $user_email = $row['email'];
+    $user_email = $row['email'] ? $row['email'] : "이메일 데이터가 비어있습니다";
     
     $join_date = $row['regist_day'];
 
@@ -138,17 +138,23 @@
             </div>
 
             <div class="menu-log">
-                <?php if(!isset($_SESSION['userid'])) { ?>
-                <a class="menu-log-in" href="./seoulvinyl_login.php">
-                    <img src="../img/common/login.png" alt="로그인 하기">
-                    <p>Login</p>
-                </a>
-                <?php } else { ?>
-                <a class="menu-log-out" href="./logout.php">
-                    <img src="../img/common/logout.png" alt="로그아웃 하기">
-                    <p>Logout</p>
-                </a>
-                <?php } ?>
+                <?php
+                    if (!$userid) {
+                ?>
+                    <a class="menu-log-in" href="./seoulvinyl_login.php">
+                        <img src="../img/common/login.png" alt="로그인 하기">
+                        <p>Login</p>
+                    </a>
+                <?php
+                    } else {
+                ?>
+                    <a class="menu-log-out" href="./logout.php">
+                        <img src="../img/common/logout.png" alt="로그아웃 하기">
+                        <p>Logout</p>
+                    </a>
+                <?php
+                    }
+                ?>
             </div>
         </div>
     </div>
@@ -198,14 +204,14 @@
                             <img class="truckimg" src="../img/common/truck.png" alt="주문 배송 이미지">
                             <div class="summary-hr"></div>
                             <p>주문 / 배송 내역</p>
-                            <span><?= $order_count ?>건</span>
+                            <span>2건</span>
                         </div>
 
                         <div class="summary-utilbox">
                             <img src="../img/common/heart.png" alt="하트 이미지">
                             <div class="summary-hr"></div>
                             <p>위시 리스트</p>
-                            <span><?= $wishlist_count ?>개</span>
+                            <span>12개</span>
                         </div>
 
                         <div class="summary-utilbox">

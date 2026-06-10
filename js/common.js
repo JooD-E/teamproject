@@ -81,12 +81,12 @@ $(function() {
                 const logoutBtn = document.querySelector('.menu-log-out');
 
                 if(data.trim() === "true") {
-                    loginBtn.style.display = 'none';  
-                    logoutBtn.style.display = 'flex';
+                    if (loginBtn) { loginBtn.style.display = 'none'; }
+                    if (logoutBtn) { logoutBtn.style.display = 'flex'; }
                 } 
                 else {
-                    loginBtn.style.display = 'flex';
-                    logoutBtn.style.display = 'none'; 
+                    if (loginBtn) { loginBtn.style.display = 'flex'; }
+                    if (logoutBtn) { logoutBtn.style.display = 'none'; }
                 }
             })
             .catch(error => console.error('에러 발생:', error));
