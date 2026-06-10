@@ -1,6 +1,16 @@
 <?php
     session_start();
     $userid = isset($_SESSION["userid"]) ? $_SESSION["userid"] : "";
+
+    if ($userid == "") {
+        echo("
+            <script>
+            alert('게시판은 로그인 후 이용하실 수 있습니다.');
+            location.href = 'seoulvinyl_login.php';
+            </script>
+        ");
+        exit;
+    }
     
     include "dbconn.php";
     mysqli_query($connect, "set names utf8"); 
