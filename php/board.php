@@ -62,7 +62,7 @@
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
-                <a href="main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+                <a href="../main.html"><img src="../img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
             </h1>
 
             <nav class="util-nav">
