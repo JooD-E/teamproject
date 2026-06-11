@@ -18,11 +18,12 @@
   width: 100%;
   height: 1000px;
   position: relative;
+  margin-top: 50px;
 }
 
 /* 이미지 */
 .magazine_banner .banner_image {
-  width: 80%;
+  width: 90%;
   position: absolute;
   top: 0;
   right: 0;
@@ -60,7 +61,7 @@
   font-family: "Pretendard";
   font-weight: 300;
   color: rgb(148, 148, 148);
-  width: 35%;
+  width: 40%;
   line-height: 1.8;
 }
 
@@ -184,6 +185,7 @@
   cursor: pointer;
   font-family: "EB Garamond";
 }
+
 
 /* active 버튼 */
 .interview nav button.active {
@@ -721,13 +723,13 @@
 /* ### 왼쪽 LP상자 ### */
 .lp_frame {
   position: relative;
-  flex: 0 0 520px;
-  width: 520px;
+  flex: 0 0 480px;
+  width: 480px;
 }
 
 /* LP 이미지 */
 .lp_frame > div {
-  width: 420px;
+  width: 350px;
   height: auto;
 }
 
@@ -740,7 +742,7 @@
 .lp_part {
   position: absolute;
   left: -80px;
-  top: 40%;
+  top: 50%;
   transform: translateY(-50%);
 
   display: flex;
@@ -846,6 +848,10 @@
   border-bottom: 3px #F0641E solid;
 }
 
+/* 텍스트 박스 전체 */
+.lp_txt_box {
+  margin-top: 100px;
+}
 
 /* 첫번째 컨텐츠 박스 */
 /* 메인 텍스트 */
@@ -869,7 +875,7 @@
 .feature {
   display: flex;
   justify-content: space-between;
-  margin: 100px 0 40px;
+  margin: 130px 0 40px;
 }
 
 .feature li {
@@ -896,10 +902,11 @@
 /* ###did you know 박스### */
 .know {
   border: 1px solid #F0641E;
+  background: #15110F;
   border-radius: 6px;
   padding: 15px;
   font-family: "Pretendard";
-  /* margin-top: 100px; */
+  margin-top: 80px;
 }
 
 .know_title {
@@ -936,6 +943,7 @@
 
 .change .know {
   border: 1px solid #F0641E;
+  background: #15110F;
   border-radius: 6px;
   padding: 15px;
   font-family: "Pretendard";
@@ -1104,9 +1112,10 @@
 .subscribe {
   width: 80%;
   height: 200px;
-  margin: 0 auto 100px;
+  margin: 200px auto 100px;
   border: #A5A198 1px solid;
   border-radius: 6px;
+  background: rgb(15, 15, 15,0.5);
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
