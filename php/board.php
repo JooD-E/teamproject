@@ -217,7 +217,7 @@
                             <option value="archive-content">내용</option>
                             <option value="archive-name">작성자</option>
                         </select>
-                        <input type="text" name="search_keyword" class="search-input" placeholder="검색어를 입력해주세요..">
+                        <input type="text" name="search_keyword" class="search-input2" placeholder="검색어를 입력해주세요..">
                         <button type="submit" class="archive-search-btn">검색</button>
                     </form>
                 </div>

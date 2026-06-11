@@ -17,11 +17,11 @@ main {margin-top:82px;border-top:1px solid #fff;background-color: #2b2b2b;}
 .total-count {font-size:14px; color:#ccc;}
 .search-form {display:flex; gap:8px;}
 .search-select,
-.search-input {background-color:transparent;border: 1px solid #fff;padding:8px 12px;border-radius:4px;
+.search-input2 {background-color:transparent;border: 1px solid #fff;padding:8px 12px;border-radius:4px;
                 font-size:14px; font-family:"Prentendard"; outline:none;color:#fff;}
 .search-select option {color:#000;}
-.search-input {width:220px;}
-.search-input::placeholder {color:#aaa;}
+.search-input2 {width:220px;}
+.search-input2::placeholder {color:#aaa;}
 .archive-search-btn {background:#fff; color:#222; border: 1px solid #fff; padding:8px 20px;
             border-radius:4px; font-size:16px; font-weight:bold;cursor: pointer;font-family:'Pretendard';
             transition: background-color 0.2s; color:#e66a2e;}
