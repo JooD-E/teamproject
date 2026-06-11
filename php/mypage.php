@@ -400,7 +400,7 @@
                     <li><a href="./seoulvinyl_member_form_modify.php"><img src="../img/common/login_id_img.png" alt=""> 회원 정보 수정</a></li>
                     <li><a href="#"><img src="../img/common/truck.png" alt=""> 주문/배송</a></li>
                     <li><a href="#"><img src="../img/common/heart.png" alt=""> 위시리스트</a></li>
-                    <li><a href="./board.php"><img src="../img/common/message.png" alt=""> 내 게시글</a></li>
+                    <li><a href="./board.php"><img src="../img/common/message.png" alt=""> 게시판</a></li>
                     <li><a href="./logout.php"><img src="../img/common/logout_black.png" alt=""> 로그아웃</a></li>
                     <li class="withdraw"><a href="./member_delete.php"><img src="../img/common/info-circle.png" alt=""> 회원탈퇴</a></li>
                 </ul>
