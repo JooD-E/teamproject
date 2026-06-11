@@ -19,7 +19,7 @@
     <header class="site-header">
         <div class="site-header-inner">
             <h1 class="logo">
-                <a href="./main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
+                <a href="main.html"><img src="img/common/logo_white.png" alt="SEOUL VINYL 홈으로 가기"></a>
             </h1>
 
             <nav class="util-nav">
@@ -93,6 +93,18 @@
                                 <a href="./about.html">BRAND STORY</a>
                                 <a href="./about.html">STORE INFO</a>
                             </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">04</span>
+                            <a href="./magazine.html" class="depth1">MAGAZINE</a>
+                            <div class="depth2">
+                                <a href="./magazine.html">INTERVIEW</a>
+                                <a href="./magazine.html">TIMELINE</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="main-menu-num">05</span>
+                            <a href="./php/board.php" class="depth1">BOARD</a>
                         </li>
                     </ul>
                 </nav>
@@ -536,5 +548,23 @@
     </div>
 
     <script src="js/about.js"></script>
+    <script>
+        fetch('./php/check_session.php', { cache: 'no-store' })
+            .then(response => response.text())
+            .then(data => {
+                const loginBtn = document.querySelector('.menu-log-in');
+                const logoutBtn = document.querySelector('.menu-log-out');
+
+                if(data.trim() === "true") {
+                    if (loginBtn) { loginBtn.style.display = 'none'; }
+                    if (logoutBtn) { logoutBtn.style.display = 'flex'; }
+                } 
+                else {
+                    if (loginBtn) { loginBtn.style.display = 'flex'; }
+                    if (logoutBtn) { logoutBtn.style.display = 'none'; }
+                }
+            })
+            .catch(error => console.error('세션 체크 에러:', error));
+    </script>
 </body>
 </html>
