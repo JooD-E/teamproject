@@ -9,7 +9,7 @@
     $sql = "select * from member where name='$name' and hp ='$hp'";
     $result = mysqli_query($connect, $sql);
 
-    $num_match = mysqli_query($connect, $sql);
+    $num_match = mysqli_num_rows($result);
 
     if(!$num_match) {
         echo("
